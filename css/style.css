@@ -396,12 +396,13 @@ body{
 	background-size: 100%, 100%;
 	background-attachment: fixed;
 }
-/*Centrar imagen del banner */
+/*Centrar imagen del banner - responsive*/
 .imgcenter{
       display: block;
       margin-left: auto;
       margin-right: auto;
       border:none;
+	  width:100%; /*resposive */
       }
 </style>
 
