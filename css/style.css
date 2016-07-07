@@ -392,7 +392,7 @@ body{
 	
 	/*Formato de ajuste del background - Ajustado al navegador*/
 	
-	background: #fff url(../images/bg.jpg) no-repeat ;
+	background: #fff url(../images/bg.jpg)repeat ;
 	background-size: 100%, 100%;
 	background-attachment: fixed;
 }
@@ -402,7 +402,28 @@ body{
       margin-left: auto;
       margin-right: auto;
       border:none;
-	  width:100%; /*resposive */
-      }
+	  
+	  width:50%; /*resposive */
+	  height:100%;
+	  max-width: 1920px;
+	  
+	  
+}
+
+footer {
+            position: fixed;
+            /* Altura total del footer en px con valor negativo */
+			
+			bottom: 0;
+			width: 100%;
+            height: 40px;
+            padding:5px 0px;
+            clear: both;
+            background: #222222;
+            text-align: center;
+            color: #fff;
+}
+
+
 </style>
 
