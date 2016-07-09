@@ -42,6 +42,9 @@
                      <a class="hiddenanchor" id="toregister"></a>
                      <a class="hiddenanchor" id="tologin"></a>
                      <div id="wrapper">
+					 
+					 
+					 <!-- ========================================= LOGIN DE LA PAGINA ========================================= -->
                          <div id="login" class="animate form">
                              <form  action="mysuperscript.php" autocomplete="on"> 
                                  <h2>Log in</h2> 
@@ -57,9 +60,13 @@
  									<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
  									<label for="loginkeeping">Keep me logged in</label>
  								</p>
+								
+								<!-- Boton de ENVIAR DATOS LOGIN -->
                                  <p class="login button"> 
                                      <input type="submit" value="Login" /> 
  								</p>
+								
+								<!-- Boton de ENVIAR A LOGIN -->
                                  <p class="change_link">
  									Not a member yet ?
  									<a href="#toregister" class="to_register">Join us</a>
@@ -67,9 +74,12 @@
                              </form>
                          </div>
  
+ 
+						<!-- ========================================= Register DE LA PAGINA ========================================= -->
                          <div id="register" class="animate form">
                              <form  action="mysuperscript.php" autocomplete="on"> 
                                  <h2> Sign up </h2> 
+								 <br>
                                  <p> 
                                      <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
                                      <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
@@ -86,9 +96,31 @@
                                      <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
                                      <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
                                  </p>
+								 
+								 <h2> Datos de usuario </h2> 
+								 <br>
+								 
+								 <p> 
+                                     <label for="nombresgnup" class="uname" data-icon="u">Nombres</label>
+                                     <input id="nombresgnup" name="nombresgnup" required="required" type="text" placeholder="Raul Alberto" />
+                                 </p>
+								 
+								 <p> 
+                                     <label for="apellidosgnup" class="uname" data-icon="u">Apellidos</label>
+                                     <input id="apellidosgnup" name="apellidosgnup" required="required" type="text" placeholder="Arguello Ojedis" />
+                                 </p>
+								 
+								 <p> 
+                                     <label for="cedulagnup" class="uname" data-icon="u">Cedula</label>
+                                     <input id="cedulagnup" name="cedulagnup" required="required" type="text" placeholder="0952544545" />
+                                 </p>
+								 
+								 
+								 <!-- Boton de ENVIAR DATOS REGISTRO -->
                                  <p class="signin button"> 
  									<input type="submit" value="Sign up"/> 
  								</p>
+								<!-- Boton de ENVIAR A LOGIN -->
                                  <p class="change_link">  
  									Already a member ?
  									<a href="#tologin" class="to_register"> Go and log in </a>
