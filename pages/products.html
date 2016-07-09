@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aplicación web para ordenar pedidos de la empresa Dulces de Hanya">
+  <meta name="author" content="Xavier Aguirre Piedra"> 
+  <meta name="copyright" content="Dulces de Hanya">
+  <meta name="organization" content="Dulces de Hanya S.A.">
+
+  <title>Productos</title>
+
+  <link href="../CSS/bootstrap.min.css" rel="stylesheet">
+  <link href="../CSS/styleRestaurant.css" rel="stylesheet" type="text/css">
+  <link href="../CSS/bootstrap.css" rel="stylesheet" type="text/css">
+
+  <script type="text/javascript" src="../JS/jquery.js"></script>
+
+  <script>
+	$(window).load(function(){
+	  $("#entrada").click(function(){
+		$("#divEntradas").show();
+			$("#divSopas").hide();
+			$("#divPtsFuerte").hide();
+			$("#divBebidas").hide();
+			$("#divPostre").hide();
+	  });
+
+	  $("#sopas").click(function(){
+			$("#divEntradas").hide();
+		$("#divSopas").show();
+			$("#divPtsFuerte").hide();
+			$("#divBebidas").hide();
+			$("#divPostre").hide();
+	  });
+
+	  $("#platoFuerte").click(function(){
+			$("#divEntradas").hide();
+			$("#divSopas").hide();
+		$("#divPtsFuerte").show();
+			$("#divBebidas").hide();
+			$("#divPostre").hide();
+	  });
+
+	  $("#bebidas").click(function(){
+			$("#divEntradas").hide();
+			$("#divSopas").hide();
+			$("#divPtsFuerte").hide();
+		$("#divBebidas").show();
+			$("#divPostre").hide();
+	  });
+
+			$("#postre").click(function(){
+					$("#divEntradas").hide();
+					$("#divSopas").hide();
+					$("#divPtsFuerte").hide();
+					$("#divBebidas").hide();
+				$("#divPostre").show();
+			});
+		});
+	</script>
+
+</head>
+
+<body >
+
+  <!-- boostrap -->
+  <nav class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Dulces de Hanya</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li class="active"><a href="#products">Products</a></li>
+          <li><a href="#events">Events</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="fondoPantalla" width="100%">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+	  <ul id="nav">
+	    <li><a id="entrada" class="listado" href="#">Entrada</a></li>
+	    <li><a id="sopas" class="listado" href="#">Sopas</a></li>
+	    <li><a id="platoFuerte" class="listado"href="#">Plato Fuerte</a></li>
+	    <li><a id="bebidas" class="listado"href="#">Bebidas</a></li>
+	    <li><a id="postre" class="listado"href="#">Postre</a></li>
+	  </ul>
+	</div>
+	<div id="divEntradas"  class="col-md-8">
+	  <div class="table-responsive">     
+	    <table class="table table-bordered">
+	      <tbody>
+		<tr>
+		  <td>
+		    <p class="objLabel">Entrada1:</p>
+		      <button type="button" class="bordeBoton"><img src="../img/ent1.jpg" title="Restaurante1"  height="150px" width="150px"></button>
+			<div class="row">
+			  <div class="col-md-4">
+			    <p class="objLabel">Cantidad:</p>
+			  </div>
+			  <div class="col-md-4">
+			    <input class="objFormCaja" type="text" name="cantidad">
+			      <button type="button" class="botonCompra"><img src="../img/compra.png" height="30px" width="30px"></button>
+			  </div>
+			</div>
+		  </td>
+
+		  <td>
+		    <p class="objLabel">Entrada2:</p>
+		      <button type="button" class="bordeBoton"><img src="../img/ent2.jpg" title="Restaurante2"  height="150px" width="150px";></button>
+			<div class="row">
+			  <div class="col-md-4">
+			    <p class="objLabel">Cantidad:</p>
+			  </div>
+			  <div class="col-md-4">
+			    <input class="objFormCaja" type="text" name="cantidad">
+			      <button type="button" class="botonCompra"><img src="../img/compra.png" height="30px" width="30px"></button>
+			  </div>
+			</div>
+            	  </td>
+            	  <td>
+		    <p class="objLabel">Entrada3:</p>
+		      <button type="button" class="bordeBoton"><img src="../img/ent3.jpg" title="Restaurante3"  height="150px" width="150px";></button>
+		        <div class="row">
+			  <div class="col-md-4">
+			    <p class="objLabel">Cantidad:</p>
+			  </div>
+			  <div class="col-md-4">
+			    <input class="objFormCaja" type="text" name="cantidad">
+			      <button type="button" class="botonCompra"><img src="../img/compra.png" height="30px" width="30px"></button>
+			  </div>
+			</div>
+		  </td>
+		</tr>
+	      </tbody>
+	    </table>
+	  </div>
+	</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+	Contáctenos: xaguirrepiedra1991@gmail.com.<br/> Guayaquil-Ecuador 2016
+  </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../JS/jquery.min.js"><\/script>')</script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <script src="../JS/ie10-viewport-bug-workaround.js"></script>
+    <script src="../JS/offcanvas.js"></script>
+</body>
+</html
