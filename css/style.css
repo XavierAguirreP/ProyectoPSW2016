@@ -393,8 +393,9 @@ body{
 	/*Formato de ajuste del background - Ajustado al navegador*/
 	
 	background: #fff url(../images/bg.png)no-repeat ;
-	/*background-size: 100%, 100%;*/
-	/*background-attachment:fixed ;*/
+	background-size: 100%, 60%;
+	
+	background-attachment:fixed ;
 }
 /*Centrar imagen del banner - responsive*/
 .imgcenter{
@@ -405,7 +406,7 @@ body{
 	  
 	  width:50%; /*resposive */
 	  height:100%;
-	  max-width: 1920px;
+	  max-width: 1600px;
 	  
 	  
 }
