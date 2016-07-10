@@ -4,3 +4,5 @@ products.html
 events.html
 ordenes.html
 login.html  (login/registro)
+
+confirmarDatos.html
