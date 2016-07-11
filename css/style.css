@@ -381,3 +381,56 @@ p.change_link{
 	height: 90px;
 	background: transparent;
 }
+/* General Demo Style */
+body{
+	font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+	
+	font-weight: 400;
+	font-size: 15px;
+	color: #1d3c41;
+	overflow-y: scroll;
+	
+	/*Formato de ajuste del background - Ajustado al navegador*/
+	
+	background: #fff url(../images/bg.png)no-repeat ;
+	background-size: 100%, 60%;
+	
+	background-attachment:fixed ;
+}
+/*Centrar imagen del banner - responsive*/
+.imgcenter{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border:none;
+	  
+	  width:50%; /*resposive */
+	  height:100%;
+	  max-width: 1600px;
+	  
+	  
+}
+
+/*Pie de pagina */ 
+footer {
+            position: fixed;
+            /* Altura total del footer en px con valor negativo */
+			
+			bottom: 0;
+			width: 100%;
+            height: 30px;
+            padding:5px 0px;
+            clear: both;
+            background: #222222;
+            text-align: center;
+            color: #fff;
+			
+			font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+	
+			font-weight: 400;
+			font-size: 13px;
+}
+
+
+</style>
+
