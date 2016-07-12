@@ -1,212 +1,370 @@
 <!DOCTYPE html>
 
-<html lang="en" class="no-js">
+<html lang="es" "no-js">
     <head>
 	
 		<!--Cabecera de Formato HTML5 -->
 		
-        <meta charset="UTF-8" />
+       
+	<title>Eventos</title>
+	
+	<meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Eventos</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		
 		<!--Identificacion de la pagina -->
-		
-        <meta name="Lista de Eventos" content="Muestra los tipos de eventos como cumpleaños, matrimonios, tipos de bocaditos en la que puedes elegir cual mas te convenga" />
-        <meta name="Hannya, pasteleria, dulces, bocaditos, eventos, dulceria ecuador, ecuador, tortas" content="html5, css3, form, switch, animation, :target, pseudo-class" />
+        <meta name="Lista de Eventos" content="Muestra los tipos de eventos como cumpleaños, matrimonios, tipos de bocaditos en la que puedes 		elegir cual mas te convenga" />
+        <meta name="Hannya, pasteleria, dulces, bocaditos, eventos, dulceria ecuador, ecuador, tortas" content="html5, css3, form, switch, 		animation, :target, pseudo-class" />
         <meta name="Dennys Parrales" content="Codrops" />
-        <link rel="shortcut icon" href="../favicon.ico"> 
+ 
+	<link rel="shortcut icon" href="../favicon.ico"> 
 		
-		<!-- Bootstrap core CSS -->
-		<link href="../css/bootstrap.min.css" rel="stylesheet"> <!-- OK -->
+	<!-- Bootstrap core CSS -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet"> <!-- OK -->
 
-		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-		<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-		<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-		<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-		<script src="../js/ie-emulation-modes-warning.js"></script>
-
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	
-		<!-- DASHBOARD -->
- 		<link href="css/dashboard.css" rel="stylesheet">
+	<!-- Internal -->
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/animate-custom.css" />
+	<link rel="stylesheet" type="text/css" href="../css/styleRestaurant.css" />
+	<script type="text/javascript" src="../js/jquery.js"></script>
 
-	
-		<!-- Internal -->
-        
-        <link rel="stylesheet" type="text/css" href="../css/style.css" />
-		<link rel="stylesheet" type="text/css" href="../css/animate-custom.css" />
-    </head>
-     <body>
+	 <script>
+	$(window).load(function(){
+	  $("#cumpleaños").click(function(){
+		$("#divcumpleaños").show();
+			$("#divquinceañeras").hide();
+			$("#divbautizos").hide();
+			$("#divmatrimonios").hide();
+	  });
+
+	  $("#quinceañeras").click(function(){
+			$("#divcumpleaños").hide();
+		$("#divquinceañeras").show();
+			$("#divbautizos").hide();
+			$("#divmatrimonios").hide();	
+	  });
+
+	  $("#bautizos").click(function(){
+			$("#divcumpleaños").hide();
+			$("#divquinceañeras").hide();
+		$("#divbautizos").show();
+			$("#divmatrimonios").hide();
+	  });
+
+	  $("#matrimonios").click(function(){
+			$("#divcumpleaños").hide();
+			$("#divquinceañeras").hide();
+			$("#divbautizos").hide();
+		$("#divmatrimonios").show();		
+	  });
+	});
+	</script>
+	</head>
+   <!------------------------------------------- CUERPO DEL DOCUMENTO -----------------------------------> 
+	<body>
 	 	<br>
          <div class="container">
              <!-- TOP BAR Menu -->
-             
-			 
-		<nav class="navbar navbar-inverse navbar-static-top">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">Dulces de Hanya</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="../pages/index.html#">Home</a></li>
-                <li><a href="../pages/about.html#">About</a></li>
-                <li><a href="../pages/products.html#">Products</a></li>
-				<li><a href="../pages/pruebaevento.html#">Events</a></li>
-				<li><a href="../pages/ordenes.html#">Ordenes</a></li>
-				<li><a href="../pages/login.html#">Login/Register</a></li> <!-- Este menu debe cambiar a mi cuenta cuando el user se logea -->
-				
-				
-				
-				<!-- Diseño Dropdwn -->
-				<!--
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                </li>
-				  
-				  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
-                  </ul>
-				  -->
-				  
-                
-              </ul>
-            </div>
-          </div>
-        </nav>
-
-			<!-- =================================== Banner ===================================================================== -->
+             	<nav class="navbar navbar-inverse navbar-static-top">
+         		<div class="container">
+            			<div class="navbar-header">
+				   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+               				<span class="sr-only">Toggle navigation</span>
+                			<span class="icon-bar"></span>
+                			<span class="icon-bar"></span>
+                			<span class="icon-bar"></span>
+              			   </button>
+            			   <a class="navbar-brand" href="#">Dulces de Hanya</a>
+          			</div>
+               				<div id="navbar" class="navbar-collapse collapse">
+            				  <ul class="nav navbar-nav">
+             				   <li><a href="../index.html#">Home</a></li>
+             				   <li><a href="../pages/about.html">About</a></li>
+					   <li><a href="../pages/products.html">Products</a></li>
+					   <li class="active" ><a href="../pages/pruebaevento.html">Events</a></li>
+					   <li><a href="../pages/ordenes.html#">Ordens</a></li>
+					   <li><a href="../pages/login.html">Login/Register</a></li> <!-- Este menu debe cambiar a mi cuenta cuando el user se logea -->
+					  </ul>
+            				</div>
+          		</div>
+        	</nav>				
+						
+	<!-- =================================== Banner ===================================================================== -->
              <header>
-                <!-- <h1>Login & Registro de <span>Dulces de Hanya</span></h1> -->
- 				<nav class="codrops-demos">
- 					 <!--  <span>Click <strong>"Join us"</strong> Para registrarte</span> -->
-					
-					<img src="../images/banner.png" alt="Nuestra empresa nuestro compromiso" style="width:width;height:height" class="imgcenter">
- 				</nav>
+               		<nav class="codrops-demos">
+ 				<img src="../images/banner.png" alt="Nuestra empresa nuestro compromiso" style="width:width;height:height" class="imgcenter">
+ 			</nav>
              </header>
 			 
-			 <!-- =====================================================================AREA DE TRABAJO ========================================================== -->
+ <!-- ====================================AREA DE TRABAJO ========================================================== -->
 		
-
-
-
-
              <section>				
-                 <div id="container_demo" > <!-- Este container_demo dentro del CSS sera el estilo que se aplicara en esta seccion RECOMIENDO
-				 crear una clase en el css para que apliques tus propios estilos dentro del secmento -->
-                    
-                     
-		 
-    <h1 align="center">E  V  E  N  T  O  S</h1>
-            <h3 align="center">Lista de eventos  . . .</h3>
-          
-        
-     <!-- ===CATEGORIAS IZQUIERDA========== -->
-	<br>
-
-        <section class="widget">
-        <a href="#"><h3 class="title">Categorías</h3></a>
-                            <ul class="">
-                    <li class="first">        <a href="#">                <span>Tortas</span>
-        </a>                           
-                        <ul class="menu_level_1">
-                    <li class="first">        <a href="#" data-products="11">       <span>Cumpleaños</span>
-        </a>        
-    </li>
-
-        <li class="last">        <a href="#" data-products="12">                <span>Matrimonios</span>
-        </a>        
-    </li>
-
-
-        </ul>
-    
-    </li>
-
-        <li>        <a href="#">                <span>Bocaditos</span>
-        </a>        
-    </li>
-
-        <li>        <a href="#">                <span>Cupcakes</span>
-        </a>        
-    </li>
-
-        <li class="last">        <a href="#">                <span>Bautizos</span>
-        </a>                            <ul class="menu_level_1">
-                    
-        </ul>
-    
-    </li>
-
-
-        </ul>
-    
-    </section>
-
+                 <div id="container_demo" >
+ <!-- =======MENU IZQUIERDA========== -->
   
+	<div class="row">
+       		<div class="col-md-3">
+			<ul id="nav">
+			    <li><a id="cumpleaños" class="listado" href="#">Cumpleaños</a></li>
+			    <li><a id="matrimonios" class="listado" href="#">Matrimonios</a></li>
+			    <li><a id="bautizos" class="listado" href="#">Bautizos</a></li>
+			    <li><a id="quinceañeras" class="listado" href="#">Quinceañeras</a></li>
+			</ul>
+		</div>
+ <!-- =======configuracion de imagenes ========== -->
 
-<!--AQUI VA IMAGENES DEL LADO DERECHO -->
 
-	 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Tipo de Eventos</h1>
+		<div id="divcumpleaños" class="col-md-8">
+	  	    <div class="table-responsive">     
+	   	        <table class="table table-bordered">
+	      		    <tbody>
+				<tr>
+		  		    <td>
+		    			<p class="objLabel">C001</p>
+		      			    <button type="button" class="bordeBoton"><img src="../images/m1.jpg" 							title="C001" height="150px" width="150px"></button>
+						    <div class="row">
+			  				   <div class="col-md-4">
+			    				        <button type="button" class="botonSleccionar"><img src="../images/check.png" 										height="30px" width="30px"></button>
+			  				    </div>
+						    </div>
+		 		   </td>
+		
+		  		   <td>
+		    			<p class="objLabel">C002</p>
+		      			    <button type="button" class="bordeBoton"><img src="../images/t1.jpg" title="C002"  						 	height="150px" width="150px"></button>
+					    	<div class="row">
+			  			    <div class="col-md-4">
+			   				   <button type="button" class="botonSeleccionar"><img src="../images/check.png" 										height="30px" width="30px"></button>
+			  				</div>
+						</div>
+            	  		   </td>
+            			
+				   <td>
+		    			<p class="objLabel">C003</p>
+		      			    <button type="button" class="bordeBoton"><img src="../images/q1.jpg" title="C003"  							height="150px" width="150px"></button>
+		        			<div class="row">
+			  			    <div class="col-md-4">
+			    				    <button type="button" class="botonSeleccionar"><img src="../images/check.png" 										height="30px" width="30px"></button>
+			 			    </div>
+						</div>
+		  		   </td>
+				</tr>
+				  
+				<tr>
+				   <td>
+		    			<p class="objLabel">C004</p>
+		      			    <button type="button" class="bordeBoton"><img src="../images/q1.jpg" title="C003"  							height="150px" width="150px"></button>
+		        			<div class="row">
+			  			    <div class="col-md-4">
+			    				    <button type="button" class="botonSeleccionar"><img src="../images/check.png" 										height="30px" width="30px"></button>
+			 			    </div>
+						</div>
+		  		   </td>
 
-          <div class="row placeholders">
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="../images/t1.png" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="../images/b1.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="../images/m1.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="../images/q1.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-          </div>
-        
-				 
-					 
-					 
-					 
-					 
-					 
-					 
-					 <h2><a href="../page/index.html">Aqui debemos camellar</a></h2>
-					 
-					 
-			
-					 
-                 </div>  
-             </section>
-			 
-         </div>
-		 
-		 <!-- ========================================================= FOOTER =======================================================-->
+				    <td> 
+		    			<p class="objLabel">C005</p>
+		      			    <button type="button" class="bordeBoton"><img src="../images/q1.jpg" title="C003"  							height="150px" width="150px"></button>
+		        			<div class="row">
+			  			    <div class="col-md-4">
+			    				    <button type="button" class="botonSeleccionar"><img src="../images/check.png" 										height="30px" width="30px"></button>
+			 			    </div>
+						</div>
+		  		   </td>	
+
+				   <td>
+		    			<p class="objLabel">C006</p>
+		      			    <button type="button" class="bordeBoton"><img src="../images/q1.jpg" title="C003"  							height="150px" width="150px"></button>
+		        			<div class="row">
+			  			    <div class="col-md-4">
+			    				   <button type="button" class="botonSeleccionar"><img src="../images/check.png" 										height="30px" width="30px"></button>
+			 			    </div>
+						</div>
+		  		   </td>
+				</tr>
+
+				<tr>
+				   <td>
+		    			<p class="objLabel">C007</p>
+		      			    <button type="button" class="bordeBoton"><img src="../images/q1.jpg" title="C003"  							height="150px" width="150px"></button>
+		        			<div class="row">
+			  			    <div class="col-md-4">
+
+			    				   <button type="button" class="botonSeleccionar"><img src="../images/check.png" 										height="30px" width="30px"></button>
+			 			    </div>
+						</div>
+		  		   </td>
+				
+				   <td>
+		    			<p class="objLabel">C008</p>
+		      			    <button type="button" class="bordeBoton"><img src="../images/q1.jpg" title="C003"  							height="150px" width="150px"></button>
+		        			<div class="row">
+			  			    <div class="col-md-4">
+			    				   <button type="button" class="botonSeleccionar"><img src="../images/check.png" 										height="30px" width="30px"></button>
+			 			    </div>
+						</div>
+		  		   </td>
+					
+				   <td>
+		    			<p class="objLabel">C009</p>
+		      			    <button type="button" class="bordeBoton"><img src="../images/q1.jpg" title="C003"  							height="150px" width="150px"></button>
+		        			<div class="row">
+			  			    <div class="col-md-4">
+			    				   <button type="button" class="botonSeleccionar"><img src="../images/check.png" 										height="30px" width="30px"></button>
+			 			    </div>
+						</div>
+		  		   </td>	
+				</tr> 
+			    </tbody>
+		          </table>
+		      </div>
+		</div>
+
+
+		<div id="divquinceañeras" style='display:none;' class="col-md-8">
+	  	    <div class="table-responsive">     
+	   	        <table class="table table-bordered">
+	      		    <tbody>
+				<tr>
+		  		    <td>
+		    			<p class="objLabel">Q001</p>
+		      			    <button type="button" class="bordeBoton"><img src="../images/m1.jpg" 							title="Q001" height="150px" width="150px"></button>
+						    <div class="row">
+			  				<div class="col-md-4">
+			    				        <input class="objFormCaja" name="cantidad" type="text">
+			           					<button type="button" class="botonCompra"><img src="..images/ 											compra.png" height="30px" width="30px"></button>
+			  				    </div>
+						    </div>
+		 		   </td>
+		
+		  		   <td>
+		    			<p class="objLabel">Q002</p>
+		      			    <button type="button" class="bordeBoton"><img src="../images/t1.jpg" title="Q002"  						 	height="150px" width="150px"></button>
+					    	<div class="row">
+			  			    <div class="col-md-4">
+			      			        <div class="col-md-4">
+			   				    <input class="objFormCaja" name="cantidad" type="text">
+			      					<button type="button" class="botonCompra"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			  				</div>
+						</div>
+            	  		   </td>
+            			
+				   <td>
+		    			<p class="objLabel">Q003</p>
+		      			    <button type="button" class="bordeBoton"><img src="../images/q1.jpg" title="Q003"  							height="150px" width="150px"></button>
+		        			<div class="row">
+			  			    <div class="col-md-4">
+			    				    <input class="objFormCaja" name="cantidad" type="text">
+			      					<button type="button" class="botonCompra"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			 				</div>
+						</div>
+		  		   </td>
+				</tr> 
+			    </tbody>
+		          </table>
+		      </div>
+		</div>
+
+
+
+		<div id="divbautizos" style='display:none;' class="col-md-8">
+	  	    <div class="table-responsive">     
+	   	        <table class="table table-bordered">
+	      		    <tbody>
+				<tr>
+		  		    <td>
+		    			<p class="objLabel">B001</p>
+		      			    <button type="button" class="bordeBoton"><img src="../images/m1.jpg" 							title="B001" height="150px" width="150px"></button>
+						    <div class="row">
+			  				<div class="col-md-4">
+			    				        <input class="objFormCaja" name="cantidad" type="text">
+			           					<button type="button" class="botonCompra"><img src="..images/ 											compra.png" height="30px" width="30px"></button>
+			  				    </div>
+						    </div>
+		 		   </td>
+		
+		  		   <td>
+		    			<p class="objLabel">B002</p>
+		      			    <button type="button" class="bordeBoton"><img src="../images/t1.jpg" title="B002"  						 	height="150px" width="150px"></button>
+					    	<div class="row">
+			  			    <div class="col-md-4">
+			   				    <input class="objFormCaja" name="cantidad" type="text">
+			      					<button type="button" class="botonCompra"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			  				</div>
+						</div>
+            	  		   </td>
+            			
+				   <td>
+		    			<p class="objLabel">B003:</p>
+		      			    <button type="button" class="bordeBoton"><img src="../images/q1.jpg" title="B003"  							height="150px" width="150px"></button>
+		        			<div class="row">
+			  			    <div class="col-md-4">
+			    				    <input class="objFormCaja" name="cantidad" type="text">
+			      					<button type="button" class="botonCompra"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			 				</div>
+						</div>
+		  		   </td>
+				</tr> 
+			    </tbody>
+		          </table>
+		      </div>
+		</div>
+
+
+		<div id="divmatrimonios" style='display:none;' class="col-md-8">
+	  	    <div class="table-responsive">     
+	   	        <table class="table table-bordered">
+	      		    <tbody>
+				<tr>
+		  		    <td>
+		    			<p class="objLabel">M001:</p>
+		      			    <button type="button" class="bordeBoton"><img src="../images/m1.jpg" 							title="M001" height="150px" width="150px"></button>
+						    <div class="row">
+			  				<div class="col-md-4">
+			    				        <input class="objFormCaja" name="cantidad" type="text">
+			           					<button type="button" class="botonCompra"><img src="..images/ 											compra.png" height="30px" width="30px"></button>
+			  				    </div>
+						    </div>
+		 		   </td>
+		
+		  		   <td>
+		    			<p class="objLabel">M002:</p>
+		      			    <button type="button" class="bordeBoton"><img src="../images/t1.jpg" title="M002"  						 	height="150px" width="150px"></button>
+					    	<div class="row">
+			  			    <div class="col-md-4">
+			   				    <input class="objFormCaja" name="cantidad" type="text">
+			      					<button type="button" class="botonCompra"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			  				</div>
+						</div>
+            	  		   </td>
+            			
+				   <td>
+		    			<p class="objLabel">M003:</p>
+		      			    <button type="button" class="bordeBoton"><img src="../images/q1.jpg" title="M003"  							height="150px" width="150px"></button>
+		        			<div class="row">
+			  			    <div class="col-md-4">
+			    				    <input class="objFormCaja" name="cantidad" type="text">
+			      					<button type="button" class="botonCompra"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			 				</div>
+						</div>
+		  		   </td>
+				</tr> 
+			    </tbody>
+		          </table>
+		      </div>
+		</div>
+	     </div>
+	  </div>
+        </section>
+       </div>
+
+          	 
+<!-- ========================================================= FOOTER =======================================================-->
 		<footer>
         <div>
-			<p class="pull-right"><a href="#" color="#FFFFFF">Back to top</a></p>
+		<!--	<p class="pull-right"><a href="#">Back to top</a></p> --> 
             <p>Dulces de Hanya - Pasteleria S.A. All rights reserved. (2016)</p>
         </div>
 		</footer>
