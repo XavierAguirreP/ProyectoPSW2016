@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>	
+		<!--Cabecera de Formato HTML5 -->
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Lista de productos por tipos con sus respectivos precios">
+	<meta name="author" content="Xavier Aguirre Piedra"> 
+	<meta name="copyright" content="Dulces de Hanya">
+	<meta name="organization" content="Dulces de Hanya S.A.">
+		<!--Identificacion de la pagina -->
+	<link rel="shortcut icon" href="../favicon.ico"> 
+	<title>Productos</title>
+		<!-- Bootstrap core CSS -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet"> <!-- OK -->
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+		<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+	<script src="../js/ie-emulation-modes-warning.js"></script>
+		<!-- DASHBOARD -->
+	<link href="css/dashboard.css" rel="stylesheet">
+		<!-- Internal -->        
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/animate-custom.css" />
+	<link rel="stylesheet" type="text/css" href="../css/styleRestaurant.css" />
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script>
+	 $(window).load(function(){
+	   $("#Tortas").click(function(){
+		$("#divTortas").show();
+			$("#divCupcakes").hide();
+			$("#divChocolates").hide();
+			$("#divDulces").hide();
+			$("#divPersonalizados").hide();
+	   });
+	   $("#Cupcakes").click(function(){
+			$("#divTortas").hide();
+		$("#divCupcakes").show();
+			$("#divChocolates").hide();
+			$("#divDulces").hide();
+			$("#divPersonalizados").hide();
+	   });
+	   $("#Chocolates").click(function(){
+			$("#divTortas").hide();
+			$("#divCupcakes").hide();
+		$("#divChocolates").show();
+			$("#divDulces").hide();
+			$("#divPersonalizados").hide();
+	   });
+	   $("#Dulces").click(function(){
+			$("#divTortas").hide();
+			$("#divCupcakes").hide();
+			$("#divChocolates").hide();
+		$("#divDulces").show();
+			$("#divPersonalizados").hide();
+	   });
+	   $("#Personalizados").click(function(){
+			$("#divTortas").hide();
+			$("#divCupcakes").hide();
+			$("#divChocolates").hide();
+			$("#divDulces").hide();
+		$("#divPersonalizados").show();
+	   });
+	 });
+	</script>
+</head>
+<body>
+	<br>
+		<div class="container">
+<!-------------------------------------TOP BAR Menu---------------------------------------------->     
+			<nav class="navbar navbar-inverse navbar-static-top">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">Dulces de Hanya</a>
+					</div>
+					<div id="navbar" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li><a href="../index.html#">Home</a></li>
+							<li><a href="../pages/about.html#">About</a></li>
+							<li class="active"><a href="../pages/productos.html#">Products</a></li>
+							<li><a href="../pages/pruebaevento.html#">Events</a></li>
+							<li><a href="../pages/ordenes.html#">Ordenes</a></li>
+							<li><a href="../pages/login.html#">Login/Register</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+<!-----------------------------------------Banner--------------------------------------------------->
+		<header>
+			<nav class="codrops-demos">	
+				<img src="../images/banner.png" alt="Nuestra empresa nuestro compromiso" style="width:width;height:height" class="imgcenter">
+			</nav>
+		</header>	 
+<!-------------------------------------Area de Trabajo---------------------------------------------->
+		<section>				
+			<div id="container_demo">
+<!----------------------------------Categorias Izquierda--------------------------------------------->
+				<div class="row">
+					<div class="col-md-3">
+						<ul id="nav">
+							<li><a id="Tortas" class="listado" href="#">Tortas</a></li>
+							<li><a id="Cupcakes" class="listado" href="#">Cupackes</a></li>
+							<li><a id="Chocolates" class="listado" href="#">Chocolates</a></li>
+							<li><a id="Dulces" class="listado" href="#">Dulces</a></li>
+							<li><a id="Personalizados" class="listado" href="#">Personalizados</a></li>
+						</ul>
+					</div>
+<!---------------------------------------PRIMER DIV-------------------------------------------------->
+					<div id="divTortas" class="col-md-8">
+						<div class="table-responsive">     
+							<table class="table table-bordered">
+								<tbody>
+									<tr>
+										<td>
+											<p class="objLabel">$25,00</p>
+											<img src="../images/torta1.jpg" title="Torta1" alt="Torta 1 categoria Tortas" height="200px" width="200px">
+											<div class="row">
+												<div class="col-md-4">
+													<p class="objLabel">Cantidad:</p>
+												</div>
+												<div class="col-md-4">
+													<input class="objFormCaja" name="cantidad" type="text">
+														<button type="button" class="botonCompra"><img src="../images/compra.png" alt="Botón compra de Torta 1" height="30px" width="30px"></button>
+												</div>
+											</div>
+										</td>
+										<td>
+											<p class="objLabel">$28,00</p>
+											<img src="../images/torta2.jpg" title="Torta2" alt="Torta 2 categoria Tortas" height="200px" width="200px">
+											<div class="row">
+												<div class="col-md-4">
+													<p class="objLabel">Cantidad:</p>
+												</div>
+												<div class="col-md-4">
+													<input class="objFormCaja" name="cantidad" type="text">
+													<button type="button" class="botonCompra"><img src="../images/compra.png" alt="Botón compra de Torta 2" height="30px" width="30px"></button>
+												</div>
+											</div>
+										</td>
+										<td>
+											<p class="objLabel">$22,00</p>
+											<img src="../images/torta3.jpg" title="Torta3" alt="Torta 3 categoria Tortas" height="200px" width="200px">
+											<div class="row">
+												<div class="col-md-4">
+													<p class="objLabel">Cantidad:</p>
+												</div>
+												<div class="col-md-4">
+													<input class="objFormCaja" name="cantidad" type="text">
+													<button type="button" class="botonCompra"><img src="../images/compra.png" alt="Botón compra de Torta 3" height="30px" width="30px"></button>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<p class="objLabel">$24,00</p>
+											<img src="../images/torta4.jpg" title="Torta4"  height="200px" width="200px">
+											<div class="row">
+												<div class="col-md-4">
+													<p class="objLabel">Cantidad:</p>
+												</div>
+												<div class="col-md-4">
+													<input class="objFormCaja" type="text" name="cantidad">
+													<button type="button" class="botonCompra"><img src="../images/compra.png" height="30px" width="30px"></button>
+												</div>
+											</div>
+										</td>
+										<td>
+											<p class="objLabel">$40,00</p>
+											<img src="../images/torta5.jpg" title="Torta5"  height="200px" width="200px">
+											<div class="row">
+												<div class="col-md-4">
+													<p class="objLabel">Cantidad:</p>
+												</div>
+												<div class="col-md-4">
+													<input class="objFormCaja" type="text" name="cantidad">
+													<button type="button" class="botonCompra"><img src="../images/compra.png" height="30px" width="30px"></button>
+												</div>
+											</div>
+										</td>
+										<td>
+											<p class="objLabel">$30,00</p>
+											<img src="../images/torta6.jpg" title="Torta6"  height="200px" width="200px">
+											<div class="row">
+												<div class="col-md-4">
+													<p class="objLabel">Cantidad:</p>
+												</div>
+												<div class="col-md-4">
+													<input class="objFormCaja" type="text" name="cantidad">
+													<button type="button" class="botonCompra"><img src="../images/compra.png" height="30px" width="30px"></button>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<p class="objLabel">$26,00</p>
+											<img src="../images/torta7.jpg" title="Torta7"  height="200px" width="200px">
+											<div class="row">
+												<div class="col-md-4">
+													<p class="objLabel">Cantidad:</p>
+												</div>
+												<div class="col-md-4">
+													<input class="objFormCaja" type="text" name="cantidad">
+													<button type="button" class="botonCompra"><img src="../images/compra.png" height="30px" width="30px"></button>
+												</div>
+											</div>
+										</td>
+										<td>
+											<p class="objLabel">$34,00</p>
+											<img src="../images/torta8.jpg" title="Torta8"  height="200px" width="200px">
+											<div class="row">
+												<div class="col-md-4">
+													<p class="objLabel">Cantidad:</p>
+												</div>
+												<div class="col-md-4">
+													<input class="objFormCaja" type="text" name="cantidad">
+													<button type="button" class="botonCompra"><img src="../images/compra.png" height="30px" width="30px"></button>
+												</div>
+											</div>
+										</td>
+										<td>
+											<p class="objLabel">$60,00</p>
+											<img src="../images/torta9.jpg" title="Torta9"  height="200px" width="200px">
+											<div class="row">
+												<div class="col-md-4">
+													<p class="objLabel">Cantidad:</p>
+												</div>
+												<div class="col-md-4">
+													<input class="objFormCaja" type="text" name="cantidad">
+													<button type="button" class="botonCompra"><img src="../images/compra.png" height="30px" width="30px"></button>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+<!-------------------------------------SEGUNDO DIV-------------------------------------------------->
+					<div id="divCupcakes" style='display:none;' class="col-md-8">
+						<div class="table-responsive">     
+							<table class="table table-bordered">
+								<tbody>
+									<tr>
+										<td>
+											<p class="objLabel">$20,00</p>
+											<img src="../images/cupcake1.jpg" title="Cupcake1" height="200px" width="200px">
+											<div class="row">
+												<div class="col-md-4">
+													<p class="objLabel">Cantidad:</p>
+												</div>
+												<div class="col-md-4">
+													<input class="objFormCaja" name="cantidad" type="text">
+													<button type="button" class="botonCompra"><img src="../images/compra.png" height="30px" width="30px"></button>
+												</div>
+											</div>
+										</td>
+										<td>
+											<p class="objLabel">$17,00</p>
+											<img src="../images/cupcake2.jpg" title="Cupcake2" height="200px" width="200px">
+											<div class="row">
+												<div class="col-md-4">
+													<p class="objLabel">Cantidad:</p>
+												</div>
+												<div class="col-md-4">
+													<input class="objFormCaja" name="cantidad" type="text">
+													<button type="button" class="botonCompra"><img src="../images/compra.png" height="30px" width="30px"></button>
+												</div>
+											</div>
+										</td>
+										<td>
+											<p class="objLabel">$23,00</p>
+											<img src="../images/cupcake3.jpg" title="Cupcake3" height="200px" width="200px">
+											<div class="row">
+												<div class="col-md-4">
+													<p class="objLabel">Cantidad:</p>
+												</div>
+												<div class="col-md-4">
+													<input class="objFormCaja" name="cantidad" type="text">
+													<button type="button" class="botonCompra"><img src="../images/compra.png" height="30px" width="30px"></button>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<p class="objLabel">$16,00</p>
+											<img src="../images/cupcake4.jpg" title="Cupcake4"  height="200px" width="200px">
+											<div class="row">
+												<div class="col-md-4">
+													<p class="objLabel">Cantidad:</p>
+												</div>
+												<div class="col-md-4">
+													<input class="objFormCaja" type="text" name="cantidad">
+													<button type="button" class="botonCompra"><img src="../images/compra.png" height="30px" width="30px"></button>
+												</div>
+											</div>
+										</td>
+										<td>
+											<p class="objLabel">$12,00</p>
+											<img src="../images/cupcake5.jpg" title="Cupcake5"  height="200px" width="200px">
+											<div class="row">
+												<div class="col-md-4">
+													<p class="objLabel">Cantidad:</p>
+												</div>
+												<div class="col-md-4">
+													<input class="objFormCaja" type="text" name="cantidad">
+													<button type="button" class="botonCompra"><img src="../images/compra.png" height="30px" width="30px"></button>
+												</div>
+											</div>
+										</td>
+										<td>
+											<p class="objLabel">$15,00</p>
+											<img src="../images/cupcake6.jpg" title="Cupcake6"  height="200px" width="200px">
+											<div class="row">
+												<div class="col-md-4">
+													<p class="objLabel">Cantidad:</p>
+												</div>
+												<div class="col-md-4">
+													<input class="objFormCaja" type="text" name="cantidad">
+													<button type="button" class="botonCompra"><img src="../images/compra.png" height="30px" width="30px"></button>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+<!-------------------------------------TERCER DIV-------------------------------------------------->
+					<div id="divChocolates" style='display:none;' class="col-md-8">
+						<div class="table-responsive">     
+							<table class="table table-bordered">
+								<tbody>
+									<tr>
+										<td>
+											<p class="objLabel">$25,00</p>
+											<img src="../images/chocolate1.jpg" title="Chocolate1" height="200px" width="200px">
+											<div class="row">
+												<div class="col-md-4">
+													<p class="objLabel">Cantidad:</p>
+												</div>
+												<div class="col-md-4">
+													<input class="objFormCaja" name="cantidad" type="text">
+													<button type="button" class="botonCompra"><img src="../images/compra.png" height="30px" width="30px"></button>
+												</div>
+											</div>
+										</td>
+										<td>
+											<p class="objLabel">$23,00</p>
+											<img src="../images/chocolate2.jpg" title="Chocolate2" height="200px" width="200px">
+											<div class="row">
+												<div class="col-md-4">
+													<p class="objLabel">Cantidad:</p>
+												</div>
+												<div class="col-md-4">
+													<input class="objFormCaja" name="cantidad" type="text">
+													<button type="button" class="botonCompra"><img src="../images/compra.png" height="30px" width="30px"></button>
+												</div>
+											</div>
+										</td>
+										<td>
+											<p class="objLabel">$20,00</p>
+											<img src="../images/chocolate3.jpg" title="Chocolate3" height="200px" width="200px">
+											<div class="row">
+												<div class="col-md-4">
+													<p class="objLabel">Cantidad:</p>
+												</div>
+												<div class="col-md-4">
+													<input class="objFormCaja" name="cantidad" type="text">
+													<button type="button" class="botonCompra"><img src="../images/compra.png" height="30px" width="30px"></button>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<p class="objLabel">$22,00</p>
+											<img src="../images/chocolate4.jpg" title="Chocolate5"  height="200px" width="200px">
+											<div class="row">
+												<div class="col-md-4">
+													<p class="objLabel">Cantidad:</p>
+												</div>
+												<div class="col-md-4">
+													<input class="objFormCaja" type="text" name="cantidad">
+													<button type="button" class="botonCompra"><img src="../images/compra.png" height="30px" width="30px"></button>
+												</div>
+											</div>
+										</td>
+										<td>
+											<p class="objLabel">$17,00</p>
+											<img src="../images/chocolate5.jpg" title="Chocolate6"  height="200px" width="200px">
+											<div class="row">
+												<div class="col-md-4">
+													<p class="objLabel">Cantidad:</p>
+												</div>
+												<div class="col-md-4">
+													<input class="objFormCaja" type="text" name="cantidad">
+													<button type="button" class="botonCompra"><img src="../images/compra.png" height="30px" width="30px"></button>
+												</div>
+											</div>
+										</td>
+										<td>
+											<p class="objLabel">$26,00</p>
+											<img src="../images/chocolate6.jpg" title="Chocolate6"  height="200px" width="200px">
+											<div class="row">
+												<div class="col-md-4">
+													<p class="objLabel">Cantidad:</p>
+												</div>
+												<div class="col-md-4">
+													<input class="objFormCaja" type="text" name="cantidad">
+													<button type="button" class="botonCompra"><img src="../images/compra.png" height="30px" width="30px"></button>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+<!-------------------------------------CUARTO DIV-------------------------------------------------->
+					<div id="divDulces" style='display:none;' class="col-md-8">
+						<div class="table-responsive">     
+							<table class="table table-bordered">
+								<tbody>
+									<tr>
+										<td>
+											<p class="objLabel">$12,00</p>
+											<img src="../images/dulces1.jpg" title="Dulces1" height="200px" width="200px">
+											<div class="row">
+												<div class="col-md-4">
+													<p class="objLabel">Cantidad:</p>
+												</div>
+												<div class="col-md-4">
+													<input class="objFormCaja" name="cantidad" type="text">
+													<button type="button" class="botonCompra"><img src="../images/compra.png" height="30px" width="30px"></button>
+												</div>
+											</div>
+										</td>
+										<td>
+											<p class="objLabel">$18,00</p>
+											<img src="../images/dulces2.jpg" title="Dulces2" height="200px" width="200px">
+											<div class="row">
+												<div class="col-md-4">
+													<p class="objLabel">Cantidad:</p>
+												</div>
+												<div class="col-md-4">
+													<input class="objFormCaja" name="cantidad" type="text">
+													<button type="button" class="botonCompra"><img src="../images/compra.png" height="30px" width="30px"></button>
+												</div>
+											</div>
+										</td>
+										<td>
+											<p class="objLabel">$15,00</p>
+											<img src="../images/dulces3.jpg" title="Dulces3" height="200px" width="200px">
+											<div class="row">
+												<div class="col-md-4">
+													<p class="objLabel">Cantidad:</p>
+												</div>
+												<div class="col-md-4">
+													<input class="objFormCaja" name="cantidad" type="text">
+													<button type="button" class="botonCompra"><img src="../images/compra.png" height="30px" width="30px"></button>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<p class="objLabel">$13,50</p>
+											<img src="../images/dulces4.jpg" title="Dulces4"  height="200px" width="200px">
+											<div class="row">
+												<div class="col-md-4">
+													<p class="objLabel">Cantidad:</p>
+												</div>
+												<div class="col-md-4">
+													<input class="objFormCaja" type="text" name="cantidad">
+													<button type="button" class="botonCompra"><img src="../images/compra.png" height="30px" width="30px"></button>
+												</div>
+											</div>
+										</td>
+										<td>
+											<p class="objLabel">$17,50</p>
+											<img src="../images/dulces5.jpg" title="Dulces5" height="200px" width="200px">
+											<div class="row">
+												<div class="col-md-4">
+													<p class="objLabel">Cantidad:</p>
+												</div>
+												<div class="col-md-4">
+													<input class="objFormCaja" type="text" name="cantidad">
+													<button type="button" class="botonCompra"><img src="../images/compra.png" height="30px" width="30px"></button>
+												</div>
+											</div>
+										</td>
+										<td>
+											<p class="objLabel">18,00</p>
+											<img src="../images/dulces6.jpg" title="Dulces6"  height="200px" width="200px">
+											<div class="row">
+												<div class="col-md-4">
+													<p class="objLabel">Cantidad:</p>
+												</div>
+												<div class="col-md-4">
+													<input class="objFormCaja" type="text" name="cantidad">
+													<button type="button" class="botonCompra"><img src="../images/compra.png" height="30px" width="30px"></button>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+<!-----------------------------------------QUINTO DIV-------------------------------------------------->
+					<div id="divPersonalizados" style='display:none;' class="col-md-8">
+						<br>
+						<div class="row">
+							<div class=" col-xs-10 col-sm-2 col-xs-offset-1 col-sm-offset-5">
+								<label>Producto</label>
+								<select class="form-control">
+									<option>Torta</option>
+									<option>Cupcakes</option>
+									<option>Chocolates</option>
+									<option>Dulces</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class=" col-xs-10 col-sm-2 col-xs-offset-1 col-sm-offset-5">
+								<label>Porciones</label>
+								<select class="form-control">
+									<option>6</option>
+									<option>10</option>
+									<option>16</option>
+									<option>20</option>
+									<option>25</option>
+									<option>30</option>
+									<option>40</option>
+									<option>50</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class=" col-xs-10 col-sm-2 col-xs-offset-1 col-sm-offset-5">
+								<p class="objLabel">Cantidad:</p>
+								<div class="col-md-4">
+									<input class="objFormCaja" name="cantidad" type="text">
+									<button type="button" class="botonCompra"><img src="../images/compra.png" alt="Botón compra Producto personalizado" height="30px" width="30px"></button>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+		</section>
+		</div>
+<!-------------------------------------------FOOTER----------------------------------------------------->
+		<footer>
+			<div>
+				<p>Dulces de Hanya - Pasteleria S.A. All rights reserved. (2016)</p>
+			</div>
+		</footer>
+</body>
+</html> 
