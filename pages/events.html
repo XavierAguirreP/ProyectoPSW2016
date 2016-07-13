@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html lang="es" "no-js">
+    <head>
+	
+		<!--Cabecera de Formato HTML5 -->
+		
+       
+	<title>Eventos</title>
+	
+	<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		
+		<!--Identificacion de la pagina -->
+	<meta name="description" content="Lista de eventos: cumpleaños, quinceañeras, bautizos, matrimonios" />
+        <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
+        <meta name="author" content="Dennys Parrales Pazmiño" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+       
+	<link rel="shortcut icon" href="../favicon.ico"> 
+		
+	<!-- Bootstrap core CSS -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet"> <!-- OK -->
+
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	
+	<!-- Internal -->
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/animate-custom.css" />
+	<link rel="stylesheet" type="text/css" href="../css/styleRestaurant.css" />
+	<script type="text/javascript" src="../js/jquery.js"></script>
+
+	 <script>
+	$(window).load(function(){
+	  $("#cumpleaños").click(function(){
+		$("#divcumpleaños").show();
+			$("#divquinceañeras").hide();
+			$("#divbautizos").hide();
+			$("#divmatrimonios").hide();
+	  });
+
+	  $("#quinceañeras").click(function(){
+			$("#divcumpleaños").hide();
+		$("#divquinceañeras").show();
+			$("#divbautizos").hide();
+			$("#divmatrimonios").hide();	
+	  });
+
+	  $("#bautizos").click(function(){
+			$("#divcumpleaños").hide();
+			$("#divquinceañeras").hide();
+		$("#divbautizos").show();
+			$("#divmatrimonios").hide();
+	  });
+
+	  $("#matrimonios").click(function(){
+			$("#divcumpleaños").hide();
+			$("#divquinceañeras").hide();
+			$("#divbautizos").hide();
+		$("#divmatrimonios").show();		
+	  });
+	});
+	</script>
+	</head>
+   <!-- ======================== DOCUCUMENTO ======================================== --> 
+	<body>
+	 	<br>
+         <div class="container">
+             <!-- TOP BAR Menu -->
+             	<nav class="navbar navbar-inverse navbar-static-top">
+         		<div class="container">
+            			<div class="navbar-header">
+				   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+               				<span class="sr-only">Toggle navigation</span>
+                			<span class="icon-bar"></span>
+                			<span class="icon-bar"></span>
+                			<span class="icon-bar"></span>
+              			   </button>
+            			   <a class="navbar-brand" href="#">Dulces de Hanya</a>
+          			</div>
+               				<div id="navbar" class="navbar-collapse collapse">
+            				  <ul class="nav navbar-nav">
+             				   <li><a href="../index.html">Home</a></li>
+             				   <li><a href="../pages/about.html">About</a></li>
+					   <li><a href="../pages/products.html">Products</a></li>
+					   <li class="active" ><a href="../pages/pruebaevento.html">Events</a></li>
+					   <li><a href="../pages/ordenes.html#">Ordens</a></li>
+					   <li><a href="../pages/login.html">Login/Register</a></li> <!-- Este menu debe cambiar a mi cuenta cuando el user se logea -->
+					  </ul>
+            				</div>
+          		</div>
+        	</nav>				
+						
+	<!-- =================================== Banner ===================================================================== -->
+             <header>
+               		<nav class="codrops-demos">
+ 				<img src="../images/banner.png" alt="Nuestra empresa nuestro compromiso" style="width:width;height:height" class="imgcenter">
+ 			</nav>
+             </header>
+			 
+ <!-- ====================================AREA DE TRABAJO ========================================================== -->
+		
+             <section>				
+                 <div id="container_demo" >
+ <!-- =======MENU IZQUIERDA========== -->
+  
+	<div class="row">
+       		<div class="col-md-3">
+			<ul id="nav">
+			    <li><a id="cumpleaños" class="listado" href="#">Cumpleaños</a></li>
+			    <li><a id="quinceañeras" class="listado" href="#">Quinceañeras</a></li>
+			    <li><a id="bautizos" class="listado" href="#">Bautizos</a></li>
+			    <li><a id="matrimonios" class="listado" href="#">Matrimonios</a></li>
+			</ul>
+		</div>
+ <!-- =======configuracion de imagenes ========== -->
+
+
+		<div id="divcumpleaños" class="col-md-8">
+	  	    <div class="table-responsive">     
+	   	        <table class="table table-bordered">
+	      		    <tbody>
+				<tr>
+		  		    <td>
+		    			<p class="objLabel">C001 ==> $1300   </p>
+					    <img alt ="" class="c001" src="../images/c001.jpg" height="150px" width="200px"/>
+						 <div class="row">
+			  				   <div class="col-md-4">
+			    				        <button type="button" class="botonComprar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			  				    </div>
+						    </div>
+		 		   </td>
+		
+		  		   <td>
+		    			<p class="objLabel">C002 ==> $1550 </p>
+		      			    <img alt ="" class="c002" src="../images/c002.jpg" height="150px" width="200px"/>
+					    	<div class="row">
+			  			    <div class="col-md-4">
+			   				   <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			  				</div>
+						</div>
+            	  		   </td>
+            			
+				   <td>
+		    			<p class="objLabel">C003 ==> $1150 </p>
+		      			    <img alt ="" class="c003" src="../images/c003.jpg" height="150px" width="200px"/>
+		        			<div class="row">
+			  			    <div class="col-md-4">
+			    				    <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			 			    </div>
+						</div>
+		  		   </td>
+				</tr>
+				  
+				<tr>
+				   <td>
+		    			<p class="objLabel">C004 ==> $800 </p>
+		      			    <img alt ="" class="c004" src="../images/c004.jpg" height="150px" width="200px"/>
+		        			<div class="row">
+			  			    <div class="col-md-4">
+			    				    <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			 			    </div>
+						</div>
+		  		   </td>
+
+				    <td> 
+		    			<p class="objLabel">C005 ==> $700 </p>
+		      			    <img alt ="" class="c005" src="../images/c005.jpg" height="150px" width="200px"/>
+		        			<div class="row">
+			  			    <div class="col-md-4">
+			    				    <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			 			    </div>
+						</div>
+		  		   </td>	
+
+				   <td>
+		    			<p class="objLabel">C006 ==> $950 </p>
+		      			    <img alt ="" class="c006" src="../images/c006.jpg" height="150px" width="200px"/>
+		        			<div class="row">
+			  			    <div class="col-md-4">
+			    				   <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			 			    </div>
+						</div>
+		  		   </td>
+				</tr>
+
+				<tr>
+				   <td>
+		    			<p class="objLabel">C007 ==> $800 </p>
+		      			    <img alt ="" class="c007" src="../images/c007.jpg" height="150px" width="200px"/>
+		        			<div class="row">
+			  			    <div class="col-md-4">
+
+			    				   <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			 			    </div>
+						</div>
+		  		   </td>
+				
+				   <td>
+		    			<p class="objLabel">C008 ==> $900 </p>
+		      			   <img alt ="" class="c008" src="../images/c008.jpg" height="150px" width="200px"/>
+		        			<div class="row">
+			  			    <div class="col-md-4">
+			    				   <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			 			    </div>
+						</div>
+		  		   </td>
+					
+				   <td>
+		    			<p class="objLabel">C009 ==> $1330 </p>
+		      			    <img alt ="" class="c009" src="../images/c009.jpg" height="150px" width="200px"/>
+		        			<div class="row">
+			  			    <div class="col-md-4">
+			    				   <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			 			    </div>
+						</div>
+		  		   </td>	
+				</tr> 
+			    </tbody>
+		          </table>
+		      </div>
+		</div>
+
+
+		<div id="divquinceañeras" style='display:none;' class="col-md-8">
+	  	    <div class="table-responsive">     
+	   	        <table class="table table-bordered">
+	      		    <tbody>
+				<tr>
+		  		    <td>
+		    			<p class="objLabel">Q001 ==> $1600 </p>
+		      			    <img alt ="" class="q001" src="../images/q001.jpg" height="150px" width="200px"/>
+						    <div class="row">
+			  				<div class="col-md-4">
+			    				         <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			  				    </div>
+						    </div>
+		 		   </td>
+		
+		  		   <td>
+		    			<p class="objLabel">Q002 ==> $1200 </p>
+		      			    <img alt ="" class="q002" src="../images/q002.jpg" height="150px" width="200px"/>
+					    	<div class="row">
+			  			    <div class="col-md-4">
+			      			        <div class="col-md-4">
+			   				    <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			  				</div>
+						</div>
+            	  		   </td>
+            			
+				   <td>
+		    			<p class="objLabel">Q003 ==> $1430 </p>
+		      			    <img alt ="" class="q003" src="../images/q003.jpg" height="150px" width="200px"/>
+		        			<div class="row">
+			  			    <div class="col-md-4">
+			    				    <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			 				</div>
+						</div>
+		  		   </td>
+				</tr>
+				
+				<tr>
+		  		    <td>
+		    			<p class="objLabel">Q004 ==> $1100 </p>
+		      			    <img alt ="" class="q004" src="../images/q004.jpg" height="150px" width="200px"/>
+						    <div class="row">
+			  				<div class="col-md-4">
+			    				         <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			  				    </div>
+						    </div>
+		 		   </td>
+		
+		  		   <td>
+		    			<p class="objLabel">Q005 ==> $1120 </p>
+		      			    <img alt ="" class="q005" src="../images/q005.jpg" height="150px" width="200px"/>
+					    	<div class="row">
+			  			    <div class="col-md-4">
+			      			        <div class="col-md-4">
+			   				    <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			  				</div>
+						</div>
+            	  		   </td>
+            			
+				   <td>
+		    			<p class="objLabel">Q006 ==> $1150 </p>
+		      			    <img alt ="" class="q006" src="../images/q006.jpg" height="150px" width="200px"/>
+						<div class="row">
+			  			    <div class="col-md-4">
+			    				    <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			 				</div>
+						</div>
+		  		   </td>
+				</tr>
+				
+				<tr>
+		  		    <td>
+		    			<p class="objLabel">Q007 ==> $1250 </p>
+					    <img alt ="" class="q007" src="../images/q007.jpg" height="150px" width="200px"/>
+						<div class="row">
+			  				<div class="col-md-4">
+			    				         <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			  				    </div>
+						    </div>
+		 		   </td>
+		
+		  		   <td>
+		    			<p class="objLabel">Q008 ==> $1320 </p>
+		      			    <img alt ="" class="q008" src="../images/q008.jpg" height="150px" width="200px"/>
+					    	<div class="row">
+			  			    <div class="col-md-4">
+			      			        <div class="col-md-4">
+			   				    <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			  				</div>
+						</div>
+            	  		   </td>
+            			
+				   <td>
+		    			<p class="objLabel">Q009 ==> $1200 </p>
+		      			    <img alt ="" class="q009" src="../images/q009.jpg" height="150px" width="200px"/>
+		        			<div class="row">
+			  			    <div class="col-md-4">
+			    				    <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			 				</div>
+						</div>
+		  		   </td>
+				</tr>
+	
+ 
+			    </tbody>
+		          </table>
+		      </div>
+		</div>
+
+
+
+		<div id="divbautizos" style='display:none;' class="col-md-8">
+	  	    <div class="table-responsive">     
+	   	        <table class="table table-bordered">
+	      		    <tbody>
+				<tr>
+		  		    <td>
+		    			<p class="objLabel">B001 ==> $1400 </p>
+		      			   <img alt ="" class="b001" src="../images/b001.jpg" height="150px" width="200px"/>
+						    <div class="row">
+			  				<div class="col-md-4">
+			    				        <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			  				    </div>
+						    </div>
+		 		   </td>
+		
+		  		   <td>
+		    			<p class="objLabel">B002 ==> $1230 </p>
+		      			    <img alt ="" class="b002" src="../images/b002.jpg" height="150px" width="200px"/>
+					    	<div class="row">
+			  			    <div class="col-md-4">
+			   				    <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			  				</div>
+						</div>
+            	  		   </td>
+            			
+				   <td>
+		    			<p class="objLabel">B003 ==> $1400 </p>
+		      			    <img alt ="" class="b003" src="../images/b003.jpg" height="150px" width="200px"/>
+		        			<div class="row">
+			  			    <div class="col-md-4">
+			    				    <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			 				</div>
+						</div>
+		  		   </td>
+				</tr>
+
+				<tr>
+		  		    <td>
+		    			<p class="objLabel">B004 ==> $1100 </p>
+		      			    <img alt ="" class="b004" src="../images/b004.png" height="150px" width="200px"/>
+						    <div class="row">
+			  				<div class="col-md-4">
+			    				        <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			  				    </div>
+						    </div>
+		 		   </td>
+		
+		  		   <td>
+		    			<p class="objLabel">B005 ==> $1400 </p>
+		      			    <img alt ="" class="b005" src="../images/b005.jpg" height="150px" width="200px"/>
+					    	<div class="row">
+			  			    <div class="col-md-4">
+			   				    <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			  				</div>
+						</div>
+            	  		   </td>
+            			
+				   <td>
+		    			<p class="objLabel">B006 ==> $1300 </p>
+		      			    <img alt ="" class="b006" src="../images/b006.jpg" height="150px" width="200px"/>
+		        			<div class="row">
+			  			    <div class="col-md-4">
+			    				    <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			 				</div>
+						</div>
+		  		   </td>
+				</tr>
+			    </tbody>
+		          </table>
+		      </div>
+		</div>
+
+
+		<div id="divmatrimonios" style='display:none;' class="col-md-8">
+	  	    <div class="table-responsive">     
+	   	        <table class="table table-bordered">
+	      		    <tbody>
+				<tr>
+		  		    <td>
+		    			<p class="objLabel">M001 ==> $1500 </p>
+		      			   <img alt ="" class="m001" src="../images/m001.jpeg" height="150px" width="200px"/>
+						    <div class="row">
+			  				<div class="col-md-4">
+			    				        <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			  				 </div>
+						    </div>
+		 		   </td>
+		
+		  		   <td>
+		    			<p class="objLabel">M002 ==> $1550 </p>
+		      			    <img alt ="" class="m001" src="../images/m002.jpg" height="150px" width="200px"/>
+					    	<div class="row">
+			  			    <div class="col-md-4">
+			   				    <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			  			    </div>
+						</div>
+            	  		   </td>
+            			
+				   <td>
+		    			<p class="objLabel">M003 ==> $1600 </p>
+		      			    <img alt ="" class="m003" src="../images/m003.jpg" height="150px" width="200px"/>
+		        			<div class="row">
+			  			    <div class="col-md-4">
+			    				    <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			 			    </div>
+						</div>
+		  		   </td>
+				</tr>
+				
+				<tr>
+		  		    <td>
+		    			<p class="objLabel">M004 ==> $1650 </p>
+		      			    <img alt ="" class="m004" src="../images/m004.jpg" height="150px" width="200px"/>
+						    <div class="row">
+			  				<div class="col-md-4">
+			    				        <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			  				 </div>
+						    </div>
+		 		   </td>
+		
+		  		   <td>
+		    			<p class="objLabel">M005 ==> $1700 </p>
+		      			    <img alt ="" class="m005" src="../images/m005.jpg" height="150px" width="200px"/>
+					    	<div class="row">
+			  			    <div class="col-md-4">
+			   				    <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			  			    </div>
+						</div>
+            	  		   </td>
+            			
+				   <td>
+		    			<p class="objLabel">M006 ==> $1750 </p>
+		      			    <img alt ="" class="m006" src="../images/m006.jpg" height="150px" width="200px"/>
+		        			<div class="row">
+			  			    <div class="col-md-4">
+			    				    <button type="button" class="botonSeleccionar"><img src="../images/compra.png" 										height="30px" width="30px"></button>
+			 			    </div>
+						</div>
+		  		   </td>
+				</tr>
+			    </tbody>
+		          </table>
+		      </div>
+		</div>
+	     </div>
+	  </div>
+        </section>
+       </div>
+
+          	 
+<!-- ============================================== FOOTER ========================================== -->
+		<footer>
+        <div>
+		<!--	<p class="pull-right"><a href="#">Back to top</a></p> --> 
+            <p>Dulces de Hanya - Pasteleria S.A. All rights reserved. (2016)</p>
+        </div>
+		</footer>
+
+     </body>
+ </html> 
