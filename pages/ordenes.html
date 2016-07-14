@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 
-<html lang="en" >
+<html lang="es" class="no-js">
     <head>
-
+	
 		<!--Cabecera de Formato HTML5 -->
-
+		
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Confirmar datos de orden - Dulces Hanya</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <title>Ordenes de peiddo - Dulces Hanya</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		
 		<!--Identificacion de la pagina -->
-
-        <meta name="description" content="Dulces de Hanya, excelencia Contamos con los mejores dulces para tus momentos especiales" />
-        <meta name="keywords" content="hanya,dulces de hanya,pasteleria,pago" />
-        <meta name="author" content="Codrops" />
-        <link rel="shortcut icon" href="../favicon.ico">
-
+		
+        <meta name="description" content="Ordenes de pedido" />
+        <meta name="keywords" content="dulces, tortas, pasteles, ordenes pasteles, pasteleria, store online, pedidos" />
+        <meta name="author" content="Santiago Arguello Ojedis" />
+		<meta name="copyright" content="Dulces de Hanya" />
+		<meta name="organization" content="Dulces de Hanya S.A" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+		
 		<!-- Bootstrap core CSS -->
 		<link href="../css/bootstrap.min.css" rel="stylesheet"> <!-- OK -->
 
@@ -27,17 +29,18 @@
 		<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 		<script src="../js/ie-emulation-modes-warning.js"></script>
 
-
+		
 		<!-- Internal -->
-        <link rel="stylesheet" type="text/css" href="../css/login.css" />
+        
         <link rel="stylesheet" type="text/css" href="../css/style.css" />
 		<link rel="stylesheet" type="text/css" href="../css/animate-custom.css" />
     </head>
      <body>
-
+	 	<br>
+        <div class="container">
              <!-- TOP BAR Menu -->
-
-<!--Nav-bar con todas las etiquetas de las páginas -->
+             
+			 
 		<nav class="navbar navbar-inverse navbar-static-top">
           <div class="container">
             <div class="navbar-header">
@@ -51,67 +54,140 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li class="active"><a href="#">Orders</a></li>
-                <li><a href="login.html">Login/Register</a></li>
-
-
+                <li class="active"><a href="../index.html#">Home</a></li>
+                <li><a href="../pages/about.html#">About</a></li>
+                <li><a href="../pages/products.html#">Products</a></li>
+				<li><a href="../pages/events.html#">Events</a></li>
+				<li><a href="../pages/ordenes.html#">Ordenes</a></li>
+				<li><a href="../pages/login.html#">Login/Register</a></li> <!-- Este menu debe cambiar a mi cuenta cuando el user se logea -->
+				
+				
+				
+				<!-- Dise�o Dropdwn -->
+				<!--
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                </li>
+				  
+				  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+				  -->
+				  
+                
               </ul>
             </div>
           </div>
         </nav>
 
+			<!-- =================================== Banner ===================================================================== -->
+             <header>
+                <!-- <h1>Login & Registro de <span>Dulces de Hanya</span></h1> -->
+ 				<nav class="codrops-demos">
+ 					 <!--  <span>Click <strong>"Join us"</strong> Para registrarte</span> -->
+					
+					<img src="../images/banner.png" alt="Nuestra empresa nuestro compromiso" style="width:width;height:height" class="imgcenter">
+ 				</nav>
+             </header>
+			 
+			 <!-- =====================================================================AREA DE TRABAJO ========================================================== -->
+			 
+		<section>				
+			<div id="container_demo" > <!-- Este container_demo dentro del CSS sera el estilo que se aplicara en esta seccion RECOMIENDO
+				 crear una clase en el css para que apliques tus propios estilos dentro del secmento -->
+				
+				<!-- Comienzo del detalle de prueba -->
+				
+				<br>
+				<div class="panel panel-danger">
+					 <div class="panel-heading">
+						<h3 class="panel-title">Productos</h3>
+					  </div>
+					<div class="panel-body detalle-producto">
+						<!-- <?php if(count($_SESSION['detalle'])>0){?> -->
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Descripci&oacute;n</th>
+										<th>Cantidad</th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+							<!-- <?php -->  
+									<!-- foreach($_SESSION['detalle'] as $k => $detalle){ -->
+							<!--	?> -->
+									<tr>
+										<td> <!-- <?php echo $detalle['producto'];?> --></td>
+										<td> <!-- <?php echo $detalle['cantidad'];?> --> </td>
+										<td><button type="button" class="btn btn-sm btn-danger eliminar-producto">Eliminar</button></td>
+										<!-- linea original con php -->
+										<!-- <td><button type="button" class="btn btn-sm btn-danger eliminar-producto" id="<?php echo $detalle['id'];?>">Eliminar</button></td> -->
+										
+									</tr>
+									<!--<?php }?>-->
+								</tbody>
+							</table>
+						<!-- <?php }else{?> -->
+						
+						<div class="panel-body"> No hay productos agregados</div>
+						<!-- <?php }?> -->
+					</div>
+				</div> <!-- END DETALLE panel -->
+				
+				<!-- Paneles de precio producto -->
+				
+				<div class="panel panel-danger">
+				  <div class="panel-heading">Precio Final</div>
+				  <div class="panel-body"> </div>
+					<table class="table"> <!-- Inicio de la Tabla -->
+						<tbody>
+						
+							<tr> <!-- fila -->
+								<td></td>
+								<td>Subtotal:</td> <!-- Columna -->
+								<td>XXX</td>
+							</tr><!-- END fila -->
+							
+							<tr> <!-- fila 2-->
+								<td></td>
+								<td>Total:</td> <!-- Columna -->
+								<td>XXX</td>
+							</tr><!-- END fila -->
+							
+							<tr>
+								<td></td>
+								<td></td>
+								<td><a href="../pages/confirmarDatos.html#" class="btn btn-success btn-agregar-producto"> Confirmar datos </a></td>
+								<!--  <button type="button" class="btn btn-success btn-agregar-producto">Confirmar datos</button>  -->
+							</tr>
 
-
-<!--Header "Confirmar datos de compra" -->
-        <div class="container">
-          <header>
-            <h1>Confirmar Datos</h1>
-          </header>
-            <div class="row">
-                <div class="col-sm-12 text-center">
-
-                    <br>
-                    <!--Form-controls de fecha de entrega y de forma de pago -->
-                    <div class="row">
-                        <div class=" col-xs-10 col-sm-2 col-xs-offset-1 col-sm-offset-5">
-                          <label>Fecha de entrega</label>
-                            <select class="form-control">
-                                <option>luego de 48 horas</option>
-                                <option>luego de 72 horas</option>
-
-                            </select>
-
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class=" col-xs-10 col-sm-2 col-xs-offset-1 col-sm-offset-5">
-                          <label>Forma de pago</label>
-                            <select class="form-control">
-                                <option>efectivo</option>
-                                <option>tarjeta de crédito</option>
-
-                            </select>
-
-                        </div>
-                    </div>
-
-                    <br>
-
-<!--Botón de aceptar que redirige a la página de productos -->
-                    <a href="products.html" class="btn btn-primary">Aceptar</a>
-
-                </div>
-            </div>
+						</tbody>
+					</table>
+				</div> <!-- FIN DIV PANEL PRECIO -->
+                    
+					 
+			</div>  
+			
+		<br>
+			
+		</section>
+			 
+        </div> <!-- Contenedor maestro -->
+		 
+		 <!-- ========================================================= FOOTER =======================================================-->
+		<footer>
+        <div>
+			<p class="pull-right"><a href="#" >Back to top</a></p>
+            <p>Dulces de Hanya - Pasteleria S.A. All rights reserved. (2016)</p>
         </div>
-         <script src="http://code.jquery.com/jquery.js"></script>
+		</footer>
 
-         <!-- Todos los plugins JavaScript de Bootstrap (tambi�n puedes
-              incluir archivos JavaScript individuales de los �nicos
-              plugins que utilices) -->
-         <script src="js/bootstrap.min.js"></script>
      </body>
  </html>
