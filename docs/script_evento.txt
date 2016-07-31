@@ -1,0 +1,35 @@
+-- Table: public.evento
+
+-- DROP TABLE public.evento;
+
+CREATE TABLE public.evento
+(
+  codigo integer NOT NULL,
+  nombre character varying NOT NULL,
+  descripcion character varying NOT NULL,
+  CONSTRAINT "PK_codigoEvento" PRIMARY KEY (codigo),
+  CONSTRAINT "FK_codigoCategoria" FOREIGN KEY (codigo)
+      REFERENCES public.categoria (codigo) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION,
+  CONSTRAINT "FK_codigoEmpleado" FOREIGN KEY (codigo)
+      REFERENCES public.empleado (codigo) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION,
+  CONSTRAINT "FK_codigoTIpo" FOREIGN KEY (codigo)
+      REFERENCES public.tipo (codigo) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.evento
+  OWNER TO postgres;
+
+-- Index: public."FKI_codigoEmpleado"
+
+-- DROP INDEX public."FKI_codigoEmpleado";
+
+CREATE INDEX "FKI_codigoEmpleado"
+  ON public.evento
+  USING btree
+  (codigo);
+
