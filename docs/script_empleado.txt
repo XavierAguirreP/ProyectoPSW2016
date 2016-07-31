@@ -1,0 +1,20 @@
+-- Table: public.empleado
+
+-- DROP TABLE public.empleado;
+
+CREATE TABLE public.empleado
+(
+  codigo integer NOT NULL DEFAULT nextval('empleado_codigo_seq'::regclass),
+  saldo integer,
+  fechaingreso date,
+  CONSTRAINT "PK_codigoEmpleado" PRIMARY KEY (codigo),
+  CONSTRAINT "FK_codigoPersona" FOREIGN KEY (codigo)
+      REFERENCES public.persona (codigo) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.empleado
+  OWNER TO postgres;
+
