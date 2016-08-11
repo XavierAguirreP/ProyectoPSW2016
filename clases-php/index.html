@@ -1,0 +1,39 @@
+<?php
+ini_set('display_errors', 1);
+require 'privilegioCollector.php';
+
+    $colector= new CollectorPrivilegio();
+?>
+<!Doctype html>
+ <html>
+     <head>
+     </head>
+     <body>
+        <table class="datos">
+          <?php
+
+            foreach ($colector->readAllPrivilegios() as $datos) {
+                ?>
+
+                     <tr>
+                      <td> <?php echo $datos->getCodigo(); ?> </td>
+                       <td> <?php echo $datos->getPrivilegio(); ?> </td>
+                       <td><a href="editarPrivilegio.php?codigo=<?php echo $datos->getCodigo();?>"> Editar</a>  </td>
+                       <td><a href="borrarPrivilegio.php?codigo=<?php echo $datos->getCodigo();?>"> Eliminar</a>  </td>
+                     </tr>
+                   <?php
+            }
+
+        
+
+?> <tr>
+<td><a href="agregarPrivilegio.php">Agregar nuevo privilegio </a></td>
+</tr>
+
+
+</table>
+
+</body>
+
+
+</html>

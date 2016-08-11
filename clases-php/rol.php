@@ -1,31 +1,29 @@
 <?php
   class Rol{
-    private $nombre;
+    private $persona;
     private $privilegios;
 
     public function __construct(){
-      $this->nombre="";
+      $this->Perona=new Persona();
       $this->privilegios=[];
     }
-    public function __construct($nombre,$privilegios){
-      $this->nombre=$nombre;
+    public function __construct($persona,$privilegios){
+      $this->persona=$persona;
       $this->privilegios=$privilegios;
     }
     public function setPrivilegios($privilegios){
       $this->privilegios=$privilegios;
 
     }
-    public function setNombre($nombre){
-      $this->nombre=$nombre;
+    public function setPersona($persona){
+      $this->persona=$persona;
     }
 
-    public function getNombre(){
-      return $this->nombre;
+    public function getPersona(){
+      return $this->persona;
 
     }
     public function getPrivilegios(){
       return $this->privilegios          ;
 
     }
-
->

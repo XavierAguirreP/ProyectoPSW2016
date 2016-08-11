@@ -24,5 +24,3 @@
       $this->codigo=$codigo;
     }
   }
-
-?>
