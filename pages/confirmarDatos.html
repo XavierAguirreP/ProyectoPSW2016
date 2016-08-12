@@ -1,3 +1,13 @@
+<?php
+
+  require 'colectorProducto.php';
+  require  'colectorDetalleOrden.php';
+  require 'colectorOrden.php';
+
+  $colectorProducto= new ColectorProducto();
+  $colectorDetalleOrden=new ColectorDetalleOrden();
+  $colectorOrden= new ColectorOrden();
+?>
 <!DOCTYPE html>
 
 <html lang="es" >
@@ -72,6 +82,34 @@
           <header>
             <h1>Confirmar Datos</h1>
           </header>
+          <table class="datos-factura">
+            <!--colectores-->
+            <?php
+            $orden=$colectorOrden->getOrden($_GET("idOrden"));
+
+            $idCliente=$orden->getIdCliente();
+            $cliente=colectorCliente->getCliente($idCliente);
+
+          ?>
+          <!-- datos de cabecera de factura-->
+          <tr>
+            <td><p>Nombre de cliente:</p><?php echo $cliente->getNombre();?></td>
+          </tr>
+          <tr>
+            <td><p>Fecha de pedido:</p> <?php echo $orden->getFechaPedido();?></td>
+          </tr>
+          <tr>
+            <td><p>Fecha de entrega:</p><?php echo $orden->getFechaEntrega();?></td>
+          </tr>
+
+        </table>
+        <table="productos">
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
             <div class="row">
                 <div class="col-sm-12 text-center">
 

@@ -6,11 +6,12 @@
   {
     private $privilegio;
     private $codigo;
-    public function __construct($privilegio,$codigo)
-    {
-      $this->privilegio=$privilegio;
-      $this->codigo=$codigo;
+
+    public function __construct(){
+      
+
     }
+
     public function getPrivilegio(){
       return $this->privilegio;
     }
