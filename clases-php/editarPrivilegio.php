@@ -1,20 +1,20 @@
 <?php
 
-require 'demoCollector.php';
-require 'Demo.php';
+require 'collectorPrivilegio.php';
 
-    $coll = new CollectorDemo();
 
-if(isset($_GET["id"])){
+    $coll = new CollectorPrivilegio();
 
-    $obj = $coll->getDemo($_GET["id"]);
+if(isset($_GET["codigo"])){
+
+    $obj = $coll->getPrivilegioObj($_GET["codigo"]);
 
     ?>
-    <form action="editar.php" method="post">
-    <input type="hidden" id="id" name="id" value="<?php echo $obj->getId(); ?>"/>
+    <form action="editarPrivilegio.php" method="post">
+    <input type="hidden" id="codigo" name="codigo" value="<?php echo $obj->getCodigo(); ?>"/>
         <div>
-            <label for="name">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" value="<?php echo $obj->getNombre(); ?>" />
+            <label for="privilegio">Privilegio:</label>
+            <input type="text" id="privilegio" name="privilegio" value="<?php echo $obj->getPrivilegio(); ?>" />
         </div>
 
         <div class="button">
@@ -23,18 +23,18 @@ if(isset($_GET["id"])){
     </form>
 
    <?php
-}else if(isset($_POST["id"]) && isset($_POST["nombre"])){
+}else if(isset($_POST["codigo"]) && isset($_POST["privilegio"])){
 
-    $obj = new Demo();
-    $obj->setId($_POST["id"]);
-    $obj->setNombre($_POST["nombre"]);
+    $obj = new Privilegio();
+    $obj->setCodigo($_POST["codigo"]);
+    $obj->setPrivilegio($_POST["privilegio"]);
 
-    if($coll->updateDemo($obj)){
-        echo "Demo actualizado con éxito";
+    if($coll->updatePrivilegio($obj)){
+        echo "Privilegio actualizado con éxito";
     }else{
-        echo "Hubo un error al intentar actualizar el Demo.";
+        echo "Hubo un error al intentar actualizar el priivlegio.";
     }
 
 }else{
-    echo "derp.";
+    echo "Houston,tenemos un problema";
 }
