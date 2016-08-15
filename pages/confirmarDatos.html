@@ -77,6 +77,12 @@
             <h1>Confirmar Datos</h1>
           </header>
           <div><p>Debe iniciar sesión para poder ordenar</p></div>
+          <div class="row">
+              <div class="col-sm-12 text-right">
+                <a href="../index.html" class="btn btn-primary">>>Home </a>
+              </div>
+            </div>
+
           <?php }
           else {
             require 'colectorProducto.php';
@@ -126,6 +132,9 @@
           <td><?php echo $producto->getPrecio();?></td>
         </tr>
         <?php }?>
+        <tr>
+          <td><p class="text-right">Total a pagar <?php echo $orden->getTotal();?></p></td>
+        </tr>
       </table>
             <div class="row">
                 <div class="col-sm-12 text-center">
@@ -153,6 +162,7 @@
                 </div>
             </div>
         </div>
+        <
         <?php } ?>
          <script src="http://code.jquery.com/jquery.js"></script>
 
