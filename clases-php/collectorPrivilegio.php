@@ -14,7 +14,7 @@
      return self::execQuery("INSERT INTO privilegio(privilegio) VALUES".$privilegio->getPrivilegio());
    }
 
-   public function getPrivilegio($codigo)
+   public function getPrivilegioObj($codigo)
    {
     $stmt = self::$con->prepare("SELECT * FROM demo WHERE codigo=:codigo");
     $stmt->execute(array(":codigo"=>$codigo));
@@ -28,7 +28,7 @@
 
   }
 
-   public function updatePrivilegio($codigo,$privilegio)
+   public function updatePrivilegio($privilegio)
    {
     try
     {
