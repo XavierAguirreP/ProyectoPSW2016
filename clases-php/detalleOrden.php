@@ -1,12 +1,12 @@
 <?php
   public class CabeceraOrden{
     private $idCabecera;
-    private $producto;
+    private $idProducto;
     private $cantidad;
     private $total;
 
     public function __construct(){
-      
+
     }
     public function getCantidad(){
       return $this->cantidad;
@@ -20,11 +20,11 @@
     public function setTotal($total){
       $this->total=$total;
     }
-    public function getProducto(){
-      return $this->producto;
+    public function getIdProducto(){
+      return $this->idProducto;
     }
-    public function setProducto($producto){
-      $this->producto=$producto;
+    public function setIdProducto($idProducto){
+      $this->idProducto=$idProducto;
     }
     public function getIdCabecera(){
       return $this->idCabecera;
