@@ -1,7 +1,3 @@
-<?php
-  session_start();
-  if(!isset($_SESSION["sesioniniciada"])){
-?>
 <!DOCTYPE html>
 
 <html lang="es" >
@@ -60,7 +56,7 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="events.html">Events</a></li>
-                <li class="active"><a href="#">Orders</a></li>
+                <li class="active"><a href="ordenes.html#">Orders</a></li>
                 <li><a href="login.html">Login/Register</a></li>
 
 
@@ -76,66 +72,6 @@
           <header>
             <h1>Confirmar Datos</h1>
           </header>
-          <div><p>Debe iniciar sesión para poder ordenar</p></div>
-          <div class="row">
-              <div class="col-sm-12 text-right">
-                <a href="../index.html" class="btn btn-primary">>>Home </a>
-              </div>
-            </div>
-
-          <?php }
-          else {
-            require 'colectorProducto.php';
-            require  'colectorDetalleOrden.php';
-            require 'colectorOrden.php';
-
-            $colectorProducto= new ColectorProducto();
-            $colectorDetalleOrden=new ColectorDetalleOrden();
-            $colectorOrden= new ColectorOrden();
-            ?>
-
-          <table class="datos-factura">
-            <!--colectores-->
-            <?php
-            $orden=$colectorOrden->getOrden($_GET("idOrden"));
-
-            $idCliente=$orden->getIdCliente();
-            $cliente=colectorCliente->getCliente($idCliente);
-
-          ?>
-          <!-- datos de cabecera de factura-->
-          <tr>
-            <td><p>Nombre de cliente:</p><?php echo $cliente->getNombre();?></td>
-          </tr>
-          <tr>
-            <td><p>Fecha de pedido:</p> <?php echo $orden->getFechaPedido();?></td>
-          </tr>
-          <tr>
-            <td><p>Fecha de entrega:</p><?php echo $orden->getFechaEntrega();?></td>
-          </tr>
-
-        </table>
-        <table="productos">
-        <tr>
-          <td><p> Producto</p></td>
-          <td><p>Descripcion</p></td>
-          <td><p>Precio</p></td>
-        </tr>
-        <?php for each($collectorDetalleOrden->readAllDetalles as $detalle){
-                if($detalle->getId_cabecera()==($_GET["idOrden"])){
-                  $producto=$colectorProducto->getProducto($detalle->getId_producto());
-
-        ?>
-        <tr>
-          <td><?php echo $producto->getNombre();?></td>
-          <td><?php echo $producto->getDescripcion();?></td>
-          <td><?php echo $producto->getPrecio();?></td>
-        </tr>
-        <?php }?>
-        <tr>
-          <td><p class="text-right">Total a pagar <?php echo $orden->getTotal();?></p></td>
-        </tr>
-      </table>
             <div class="row">
                 <div class="col-sm-12 text-center">
 
@@ -152,7 +88,17 @@
 
                         </div>
                     </div>
+                    <div class="row">
+                        <div class=" col-xs-10 col-sm-2 col-xs-offset-1 col-sm-offset-5">
+                          <label>Forma de pago</label>
+                            <select class="form-control">
+                                <option>efectivo</option>
+                                <option>tarjeta de crédito</option>
 
+                            </select>
+
+                        </div>
+                    </div>
 
                     <br>
 
@@ -162,8 +108,6 @@
                 </div>
             </div>
         </div>
-        <
-        <?php } ?>
          <script src="http://code.jquery.com/jquery.js"></script>
 
          <!-- Todos los plugins JavaScript de Bootstrap (tambi�n puedes
