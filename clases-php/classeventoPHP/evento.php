@@ -1,12 +1,12 @@
 
 <?php
-	require_once("tallerPHp/conexion.php")
+	require_once "conexion.php";
 	
 
 	public class evento {
 		
 	
-		private $codigo;
+		private $id_evento;
 		private $nombre;
 		private $descripcion;
 
@@ -15,12 +15,12 @@
 		public function __construct(){
     		}
   
-		public function getCodigo() {  
-     		return $this->codigo;  
+		public function getId_evento() {  
+     		return $this->id_evento;  
    		}  
    
-		public function setCodigo($codigo) {  
-		$this->codigo = $codigo;  
+		public function setId_evento($id_evento) {  
+		$this->id_Evento = $id_evento;  
    		}  
    
 		public function getNombre() {  
