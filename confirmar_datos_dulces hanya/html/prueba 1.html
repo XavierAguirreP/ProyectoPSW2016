@@ -1,42 +1,164 @@
+?php
+  session_start();
+  if(!isset($_SESSION["sesioniniciada"])){
+?>
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="dscription" content="Dulces de Hanya es un negocio dedicado a brindar dulces y comida de excelente calidad">
-    <meta name="keywords" content="hanya,dulces de hanya,pasteleria">
-    <title>Plantilla básica de Bootstrap</title>
- 
-    <!-- CSS de Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
- 
-    <!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
-	<title>Dulces de Hanya::orden de pago
-	</title>
-  </head>
-  <body><center>
-    <h1>Confirmar Datos</h1>
-<br></br>
-<select class="form-control">
-  <option>efectivo</option>
-  <option>tarjeta de crédito</option>
-  
-</select>
-</center>
+<html lang="es" >
+    <head>
 
- 
-    <!-- Librería jQuery requerida por los plugins de JavaScript -->
-    <script src="http://code.jquery.com/jquery.js"></script>
- 
-    <!-- Todos los plugins JavaScript de Bootstrap (también puedes
-         incluir archivos JavaScript individuales de los únicos
-         plugins que utilices) -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
-</html>
+		<!--Cabecera de Formato HTML5 -->
+
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Confirmar datos de orden - Dulces Hanya</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!--Identificacion de la pagina -->
+
+        <meta name="description" content="Confirmar datos de orden, pastelerÃ­a Dulces de Hanya" />
+        <meta name="keywords" content="hanya,dulces de hanya,pasteleria,pago,dulces,tortas,pasteles" />
+        <meta name="author" content="Maria Belen Guaranda" />
+        <link rel="shortcut icon" href="../favicon.ico">
+
+		<!-- Bootstrap core CSS -->
+		<link href="../css/bootstrap.min.css" rel="stylesheet"> <!-- OK -->
+
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+		<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+		<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+		<script src="../js/ie-emulation-modes-warning.js"></script>
+
+
+		<!-- Internal -->
+        <link rel="stylesheet" type="text/css" href="../css/login.css" />
+        <link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/animate-custom.css" />
+    </head>
+     <body>
+       <br>
+ <div class="container">
+             <!-- TOP BAR Menu -->
+
+<!--Nav-bar con todas las etiquetas de las pÃ¡ginas -->
+		<nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Dulces de Hanya</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li class="active"><a href="#">Orders</a></li>
+                <li><a href="login.html">Login/Register</a></li>
+
+
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+
+
+<!--Header "Confirmar datos de compra" -->
+
+          <header>
+            <h1>Confirmar Datos</h1>
+          </header>
+          <div><p>Debe iniciar sesiÃ³n para poder ordenar</p></div>
+          <?php }
+          else {
+            require 'colectorProducto.php';
+            require  'colectorDetalleOrden.php';
+            require 'colectorOrden.php';
+
+            $colectorProducto= new ColectorProducto();
+            $colectorDetalleOrden=new ColectorDetalleOrden();
+            $colectorOrden= new ColectorOrden();
+            ?>
+
+          <table class="datos-factura">
+            <!--colectores-->
+            <?php
+            $orden=$colectorOrden->getOrden($_GET("idOrden"));
+
+            $idCliente=$orden->getIdCliente();
+            $cliente=colectorCliente->getCliente($idCliente);
+
+          ?>
+          <!-- datos de cabecera de factura-->
+          <tr>
+            <td><p>Nombre de cliente:</p><?php echo $cliente->getNombre();?></td>
+          </tr>
+          <tr>
+            <td><p>Fecha de pedido:</p> <?php echo $orden->getFechaPedido();?></td>
+          </tr>
+          <tr>
+            <td><p>Fecha de entrega:</p><?php echo $orden->getFechaEntrega();?></td>
+          </tr>
+
+        </table>
+        <table="productos">
+        <tr>
+          <td><p> Producto</p></td>
+          <td><p>Descripcion</p></td>
+          <td><p>Precio</p></td>
+        </tr>
+        <?php for each($collectorDetalleOrden->readAllDetalles as $detalle){
+                if($detalle->getId_cabecera()==($_GET["idOrden"])){
+                  $producto=$colectorProducto->getProducto($detalle->getId_producto());
+
+        ?>
+        <tr>
+          <td><?php echo $producto->getNombre();?></td>
+          <td><?php echo $producto->getDescripcion();?></td>
+          <td><?php echo $producto->getPrecio();?></td>
+        </tr>
+        <?php }?>
+      </table>
+            <div class="row">
+                <div class="col-sm-12 text-center">
+
+                    <br>
+                    <!--Form-controls de fecha de entrega y de forma de pago -->
+                    <div class="row">
+                        <div class=" col-xs-10 col-sm-2 col-xs-offset-1 col-sm-offset-5">
+                          <label>Fecha de entrega</label>
+                            <select class="form-control">
+                                <option>luego de 48 horas</option>
+                                <option>luego de 72 horas</option>
+
+                            </select>
+
+                        </div>
+                    </div>
+
+
+                    <br>
+
+<!--BotÃ³n de aceptar que redirige a la pÃ¡gina de productos -->
+                    <a href="#" class="btn btn-primary">Aceptar</a>
+
+                </div>
+            </div>
+        </div>
+        <?php } ?>
+         <script src="http://code.jquery.com/jquery.js"></script>
+
+         <!-- Todos los plugins JavaScript de Bootstrap (tambiï¿½n puedes
+              incluir archivos JavaScript individuales de los ï¿½nicos
+              plugins que utilices) -->
+         <script src="js/bootstrap.min.js"></script>
+     </body>
+ </html>
