@@ -1,5 +1,5 @@
 <?php
-  public class CabeceraOrden{
+  public class DetalleOrden{
     private $idCabecera;
     private $idProducto;
     private $cantidad;

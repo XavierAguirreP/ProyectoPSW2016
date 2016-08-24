@@ -1,0 +1,20 @@
+- Table: public."detalleOrden"
+
+-- DROP TABLE public."detalleOrden";
+
+CREATE TABLE public."detalleOrden"
+(
+  id_cabecera integer NOT NULL DEFAULT nextval('"detalleOrden_id_cabecera_seq"'::regclass),
+  id_producto integer NOT NULL DEFAULT nextval('"detalleOrden_id_producto_seq"'::regclass),
+  cantidad integer,
+  total integer,
+  CONSTRAINT id_cabecera FOREIGN KEY (id_cabecera)
+      REFERENCES public.cabecera_orden (id_cabecera) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public."detalleOrden"
+  OWNER TO postgres;
+
