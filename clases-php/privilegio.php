@@ -8,7 +8,7 @@
     private $codigo;
 
     public function __construct(){
-      
+
 
     }
 
@@ -21,7 +21,7 @@
     public function setPrivilegio($privilegio){
       $this->privilegio=$privilegio;
     }
-    public function setCodigo(){
+    public function setCodigo($codigo){
       $this->codigo=$codigo;
     }
   }

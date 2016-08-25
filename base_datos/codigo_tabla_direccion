@@ -1,0 +1,15 @@
+CREATE TABLE public.direccion
+(
+  id_direccion integer NOT NULL DEFAULT nextval('direccion_id_direccion_seq'::regclass),
+  nombre_direccion character varying NOT NULL,
+  calle_principal character varying,
+  calle_secundaria character varying,
+  numeracion integer NOT NULL,
+  nombre_sector character varying,
+  CONSTRAINT id_direccion PRIMARY KEY (id_direccion)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.direccion
+  OWNER TO postgres;

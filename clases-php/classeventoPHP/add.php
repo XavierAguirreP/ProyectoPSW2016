@@ -1,8 +1,10 @@
 <?php
 require_once("evento.php");
-$tra=new Trabajo();
-if(isset($_POST["grabar"]) and $_POST["grabar"]=="si")
-{
+session_start();
+if(isset($_SESSION["login"]){
+  $tra=new Trabajo();
+  if(isset($_POST["grabar"]) and $_POST["grabar"]=="si")
+  {
     $tra->add();
     exit;
 }
@@ -48,3 +50,4 @@ if(isset($_GET["m"]))
 </form>
 </body>
 </html>
+<?php } ?>
