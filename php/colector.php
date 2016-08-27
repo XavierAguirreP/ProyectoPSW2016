@@ -1,6 +1,5 @@
 <?php
 require_once("conexion.php");
-require_once("usuario.php"); //Segun la tabla a Usar
 
 class colector
 {

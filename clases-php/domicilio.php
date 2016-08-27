@@ -1,20 +1,23 @@
 <?php
   public class Domicilio{
     private $id;
-    private $nombreDireccion;
+    private $direccionDescriptiva;
     private $callePrincipal;
     private $calleSecundaria;
     private $numeracion;
-    private $nombreSector;
+
     public function __construct()
     {
 
     }
     public function getId(){
-
+      return $this->id;
     }
-    public function getNombreDireccion(){
-        return $this->id;
+    public function setId($id){
+      $this->id=$id;
+    }
+    public function getDireccionDescriptiva(){
+        return $this->direccionDescriptiva;
     }
     public function getCallePrincipal(){
       return $this->callePrincipal;
@@ -25,14 +28,10 @@
     public function getNumeracion(){
       return $this->numeracion;
     }
-    public function getNombreSector(){
-      return $this->nombreSector;
-    }
-    public function setId($id){
-      $this->id=$id;
-    }
-    public function setNombreDireccion($nombreDireccion){
-      $this->nombreDireccion=$nombreDireccion;
+    
+
+    public function setDireccionDescriptiva($nombreDireccion){
+      $this->direccionDescriptiva=$nombreDireccion;
     }
     public function setCallePrincipal($callePrincipal){
       $this->callePrincipal=$callePrincipal;
@@ -43,7 +42,5 @@
     public function setNumeracion($numeracion){
       $this->numeracion=$numeracion;
     }
-    public function setNombreSector($nombreSector){
-      $this->nombreSector=$nombreSector;
-    }
+
   }

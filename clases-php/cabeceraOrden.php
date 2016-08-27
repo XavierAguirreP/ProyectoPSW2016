@@ -2,15 +2,21 @@
   class CabeceraOrden{
     private $id;
     private $idCliente;
-    private $fechaPedido
+    private $fechaEmision;
     private $fechaEntrega;
     private $estado;
+    private $iva;
 
     public function __construct(){
 
 
     }
-
+    public function getIva(){
+      return $this->iva;
+    }
+    public function setIva($idc){
+      $this->iva=$idc;
+    }
     public function getId(){
       return $this->id;
     }
@@ -21,7 +27,7 @@
       $this->idCliente=$idc;
     }
     public function setId($id){
-      $this->codigo=$id;
+      $this->id=$id;
     }
     public function getFechaEntrega(){
       return $this->fechaEntrega;
@@ -29,11 +35,11 @@
     public function setFechaEntrega($fechaEntrega){
       $this->fechaEntrega=$fechaEntrega;
     }
-    public function getFechaPedido(){
-      return $this->fechaEntrega;
+    public function getFechaEmision(){
+      return $this->fechaEmision;
     }
-    public function setFechaPedido($fechaPedido){
-      $this->fechaEntrega=$fechaPedido;
+    public function setFechaEmision($fecha){
+      $this->fechaEmision=$fecha;
     }
 
     public function getEstado(){

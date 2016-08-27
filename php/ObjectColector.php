@@ -1,6 +1,8 @@
 <?php //Reutilizador de Objetos del proyecto
 
 require_once("colector.php");
+require_once("usuario.php"); //Segun la tabla a Usar
+
 class ObjectColector //instanciable
 {
 
