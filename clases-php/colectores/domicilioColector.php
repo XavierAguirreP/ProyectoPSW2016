@@ -63,11 +63,11 @@ public function ListarDomicilios()
 		}
  }
 
- public function DeleteDomicilio($direccion)
+ public function DeleteDomicilio($id)
  {
  try
 		{
-		     $result= $this->modelo->operacion("DELETE from '.domicilio.' WHERE id= '" . $direccion->getId() . "' ");
+		     $result= $this->modelo->operacion("DELETE from '.domicilio.' WHERE id= '" . $id. "' ");
 
 			return $result;
 		}
@@ -77,11 +77,11 @@ public function ListarDomicilios()
 		}
  }
 
- public function ConsultarDomicilio($direccion){
+ public function ConsultarDomicilio($id){
 
  	try
 		{
-		    $result= $this->modelo->operacion("SELECT from '.domicilio.' WHERE id= '" . $direccion->getId(). "' ");
+		    $result= $this->modelo->operacion("SELECT from '.domicilio.' WHERE id= '" . $id. "' ");
 
 			return $result;
 		}

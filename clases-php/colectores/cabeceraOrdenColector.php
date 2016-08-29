@@ -63,11 +63,11 @@ public function ListarCabeceras()
 		}
  }
 
- public function DeleteCabeceraOrden($cabecera)
+ public function DeleteCabeceraOrden($id)
  {
  try
 		{
-		     $result= $this->modelo->operacion("DELETE from '.cabecera_orden_pedido.' WHERE id= '" . $cabecera->getId() . "' ");
+		     $result= $this->modelo->operacion("DELETE from '.cabecera_orden_pedido.' WHERE id= '" . $id . "' ");
 
 			return $result;
 		}
@@ -77,11 +77,11 @@ public function ListarCabeceras()
 		}
  }
 
- public function ConsultarCabeceraOrden($cabecera){
+ public function ConsultarCabeceraOrden($id){
 
  	try
 		{
-		    $result= $this->modelo->operacion("SELECT from '.cabecera_orden_pedido.' WHERE id= '" . $cabecera->getId(). "' ");
+		    $result= $this->modelo->operacion("SELECT from '.cabecera_orden_pedido.' WHERE id= '" . $id. "' ");
 
 			return $result;
 		}

@@ -77,11 +77,11 @@ public function ListarDetalles()
 		}
  }
 */
- public function ConsultarDetalleOrden($detalle){
+ public function ConsultarDetalleOrden($id_cabecera_orden){
 
  	try
 		{
-		    $result= $this->modelo->operacion("SELECT from '.det_orden_perdido.' WHERE id_cabecera_orden= '" . $detalle->getIdCabeceraOrden(). "' ");
+		    $result= $this->modelo->operacion("SELECT from '.det_orden_perdido.' WHERE id_cabecera_orden= '" . $id_cabecera_orden. "' ");
 
 			return $result;
 		}
