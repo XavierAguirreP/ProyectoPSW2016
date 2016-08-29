@@ -35,7 +35,7 @@ public function ListarDetalles()
 	}
 
 
- public function InsertDetalleaOrden($detalle)
+ public function InsertDetalleOrden($detalle)
  {
  try
 		{

@@ -35,11 +35,11 @@ public function ListarDomicilios()
 	}
 
 
- public function InsertDomiclio($direccion)
+ public function InsertDomicilio($direccion)
  {
  try
 		{
-		    $result= $this->modelo->operacion("INSERT into domicilio (id, direccion_descriptiva, calle_principal, calle_secundaria, numeracion_casa, nombre_sector) values ('".$direccion->getId()."', '".$direccion->getDireccionDescriptiva()."', '".$direccion->getCallePrincipal()."', '".$direccion->getCalleSecundaria()."', '".$direccion->getNumeracion()."', '".$$direccion->getNombreSector()."' )");
+		    $result= $this->modelo->operacion("INSERT into domicilio (id, direccion_descriptiva, calle_principal, calle_secundaria, numeracion_casa) values ('".$direccion->getId()."', '".$direccion->getDireccionDescriptiva()."', '".$direccion->getCallePrincipal()."', '".$direccion->getCalleSecundaria()."', '".$direccion->getNumeracion()."' )");
 
 			return $result;
 		}
@@ -53,7 +53,7 @@ public function ListarDomicilios()
  {
  try
 		{
-		    $result= $this->modelo->operacion("UPDATE '.domicilio.' set direccion_descriptiva= '".$direccion->getDireccionDescriptiva()."' , calle_principal = '".$direccion->getCallePrincipal()."' , calle_secundaria = '".$direccion->getCalleSecundaria()."' , numeracion_casa = '".$direccion->getNumeracion()."' , nombre_sector = '".$direccion->getNombreSector()."' WHERE id='".$direccion->getId()."' ");
+		    $result= $this->modelo->operacion("UPDATE '.domicilio.' set direccion_descriptiva= '".$direccion->getDireccionDescriptiva()."' , calle_principal = '".$direccion->getCallePrincipal()."' , calle_secundaria = '".$direccion->getCalleSecundaria()."' , numeracion_casa = '".$direccion->getNumeracion()."'  WHERE id='".$direccion->getId()."' ");
 
 			return $result;
 		}
