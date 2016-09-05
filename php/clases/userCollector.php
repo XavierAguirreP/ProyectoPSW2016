@@ -1,7 +1,7 @@
 <?php
 
 
-	require_once("../Proyect-Advance/clases/colector.php");
+	require_once("../clases/colector.php");
 
 	class userCollector{
 
@@ -33,7 +33,7 @@
 
 			try{
 
-				$result = $this->modelo->operacion("INSERT INTO usuario(nombre_usuario, contraseña, id_tipo_usuario, id_rol) values('".$nombre_user."', '".$pass."', '".$id_tipo_usuario."', '".$id_rol."') ");
+				$result = $this->modelo->operacion("INSERT INTO usuario(nombre_usuario, pass, id_tipo_usuario, id_rol) values('".$nombre_user."', '".$pass."', '".$id_tipo_usuario."', '".$id_rol."') ");
 
 				return $result;
 
@@ -49,7 +49,7 @@
 
 			try{
 
-				$result= $this->modelo->operacion("UPDATE usuario SET nombre_usuario = '".$nombre_user."', contraseña = '".$pass."', id_tipo_usuario= '".$id_tipo_usuario."', id_rol= '".$id_rol."' WHERE id_usuario ='".$id."' ");
+				$result= $this->modelo->operacion("UPDATE usuario SET nombre_usuario = '".$nombre_user."', pass= '".$pass."', id_tipo_usuario= '".$id_tipo_usuario."', id_rol= '".$id_rol."' WHERE id ='".$id."' ");
 
 				return $result;
 
@@ -64,7 +64,7 @@
 			$flag = false;
 			try{
 
-				$result = $this->modelo->operacion("DELETE from usuario WHERE id_usuario = '".$id."' ");
+				$result = $this->modelo->operacion("DELETE from usuario WHERE id = '".$id."' ");
 				
 				//EXPerimental
 				$flag = true;

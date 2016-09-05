@@ -11,7 +11,7 @@
 		echo $user;
 		echo nl2br(" \n ");
 
-		require_once 'Administrator.php';
+		require_once '../paginas/Administrator.php';
 
 	}else{
 		echo "usuario o contraseña incorrectos";

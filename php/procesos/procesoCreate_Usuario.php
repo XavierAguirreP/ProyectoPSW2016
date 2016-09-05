@@ -1,7 +1,7 @@
 <?php
 
-	require_once("../Proyect-Advance/clases/userCollector.php");
-	require_once("../Proyect-Advance/clases/usuario.php");
+	require_once("../clases/userCollector.php");
+	require_once("../clases/usuario.php");
 
 	$alm = new usuario();
 	$model = new userCollector();
@@ -23,7 +23,7 @@
 	<title>PROCESO - INSERT - USUARIO</title>
 </head>
 <body>
-	<a href="../Proyect-Advance/Listar_usuario.php">Volver</a>
+	<a href="../paginas/Listar_usuario.php">Volver</a>
 
 </body>
 </html>
