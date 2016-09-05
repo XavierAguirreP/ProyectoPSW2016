@@ -3,8 +3,8 @@
 	$uservalid="reaper";
 	$passvalid="123";
 
-	$user = $_GET['usuario'];
-	$pass = $_GET['pass'];
+	$user = $_GET['username'];
+	$pass = $_GET['password'];
 
 	if($uservalid == $user && $passvalid==$pass){
 		echo "Bienvenid@ ";
