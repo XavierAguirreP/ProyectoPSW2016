@@ -1,12 +1,13 @@
 <?php
 
-	require_once("../Proyect-Advance/clases/userCollector.php");
-	require_once("../Proyect-Advance/clases/usuario.php");
+	require_once("../clases/userCollector.php");
+	require_once("../clases/usuario.php");
 
 	$alm= new usuario();
 	$model = new userCollector();
 
 	$id = $_GET['id'];
+	$nombre = $_GET['nombre'];
 
 ?>
 
@@ -18,7 +19,7 @@
 </head>
 <body style="padding:15px;">
 
-	<form action="procesoUpdate_usuario.php" method="POST">
+	<form action="../procesos/procesoUpdate_usuario.php" method="POST">
 		<div>
 			<br>
 			<label>ID:</label>
@@ -28,7 +29,7 @@
 		<div>
 			<br>
 			<label>Nombre user:</label>
-			<input type="text" name="nombre">
+			<input type="text" name="nombre" value= "<?php echo $nombre ?>" >
 			
 		</div>
 
@@ -56,7 +57,7 @@
 			<input type="submit" name="enviar" valor="enviar">
 			<br>
 			<br>
-			<a href="Listar_usuario.php">Volver</a>
+			<a href="../paginas/Listar_usuario.php">Volver</a>
 		</div>
 		
 

@@ -2,9 +2,9 @@
 
 class usuario{
 
-	private $id_usuario;
+	private $id;
 	private $nombre_usuario;
-	private $contraseña;
+	private $pass;
 	private $id_tipo_usuario;
 	private $id_rol;
 
@@ -15,18 +15,18 @@ class usuario{
     }
 
     function __clone() {  
-     $this->id_usuario = ++$this->id_usuario;   
+     $this->id = ++$this->id;   
     }   
 
 
 	//Metodos SET & GET
 
-    public function get_Id_usuario(){
-    	return $this->id_usuario;
+    public function get_Id(){
+    	return $this->id;
     }
 
-    public function set_Id_usuario($id_usuario){
-    	$this->id_usuario = $id_usuario;
+    public function set_Id($id){
+    	$this->id = $id;
     }
 
     public function get_Nombre_usuario(){
@@ -37,12 +37,12 @@ class usuario{
     	$this->nombre_usuario = $nombre_usuario;
     }
 
-    public function get_Contraseña(){
-    	return $this->contraseña;
+    public function get_Pass(){
+    	return $this->pass;
     }
 
-    public function set_Contraseña($pass){
-    	$this->contraseña = $pass;
+    public function set_Pass($pass){
+    	$this->pass = $pass;
     }
 
     public function get_Id_tipo_usuario(){

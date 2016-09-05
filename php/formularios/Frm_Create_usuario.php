@@ -1,7 +1,7 @@
 <?php
 
-	require_once("../Proyect-Advance/clases/userCollector.php");
-	require_once("../Proyect-Advance/clases/usuario.php");
+	require_once("../clases/userCollector.php");
+	require_once("../clases/usuario.php");
 
 	$alm = new usuario();
 	$model = new userCollector();
@@ -15,7 +15,7 @@
 </head>
 <body style="padding:15px;">
 
-	<form id="principal" action="procesoCreate_Usuario.php" method="POST">
+	<form id="principal" action="../procesos/procesoCreate_Usuario.php" method="POST">
 		<div>
 			<br>
 			<label>Nombre: </label>
@@ -39,6 +39,9 @@
 
 		<div>
 			<input type="submit" name="enviar" value="enviar">
+			<br>
+			<br>
+			<a href="../paginas/Listar_usuario.php">Volver</a>
 		</div>
 		
 

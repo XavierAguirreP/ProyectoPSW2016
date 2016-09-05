@@ -2,9 +2,9 @@
 
 //CLASS
 
-require_once("../Proyect-Advance/clases/conexion.php");
-require_once("../Proyect-Advance/clases/usuario.php");
-require_once("../Proyect-Advance/clases/userCollector.php");
+require_once("../clases/conexion.php");
+require_once("../clases/usuario.php");
+require_once("../clases/userCollector.php");
 
 //Inicializacion
 
@@ -29,7 +29,7 @@ $id= 0;
 			<a href="Administrator.php">Volver</a>
 			<br>
 			<br>
-            <a href="Frm_Create_usuario.php">Create</a>
+            <a href="../formularios/Frm_Create_usuario.php">Create</a>
             <br>
             <br>
             <table class="pure-table pure-table-horizontal" border="1">
@@ -49,16 +49,16 @@ $id= 0;
             	</thead>
             		<?php foreach ($model->ListarUsuario() as $r): ?>
             			<tr>
-            				<td><?php echo $r-> get_Id_usuario();  ?></td>
+            				<td><?php echo $r-> get_Id();  ?></td>
             				<td><?php echo $r-> get_Nombre_usuario(); ?></td>
-            				<td><?php echo $r-> get_Contraseña(); ?></td>
+            				<td><?php echo $r-> get_Pass(); ?></td>
             				<td><?php echo $r-> get_Id_tipo_usuario(); ?></td>
             				<td><?php echo $r-> get_Id_rol(); ?></td>
 
             				<!- OPTIONS ->
 
-            				<td><a href="frm_Update_usuario.php?id=<?php echo $r->get_Id_usuario(); ?>">Update</a></td>
-            				<td><a href="proceso_Delete_usuario.php?id=<?php echo $r->get_Id_usuario(); ?>">Delete</a></td>
+            				<td><a href="../formularios/frm_Update_usuario.php?id=<?php echo $r->get_Id();?>&nombre=<?php echo $r->get_Nombre_usuario();?>">Update</a></td>
+            				<td><a href="../procesos/proceso_Delete_usuario.php?id=<?php echo $r->get_Id(); ?>">Delete</a></td>
 
             			</tr>
             		<?php endforeach; ?>
