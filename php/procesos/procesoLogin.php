@@ -15,6 +15,7 @@
 	$uservalid="reaper";
 	$passvalid="123";
 
+<<<<<<< HEAD
 	$username = $_GET['username'];
 	$pass = $_GET['password'];
 
@@ -41,6 +42,10 @@
 		<?php //Apertura del HTML
 	}
 	
+=======
+	$user = $_GET['username'];
+	$pass = $_GET['password'];
+>>>>>>> d5f4cac5c8e385392c3accf9741a8e75bab18b80
 
 	/*
 	if($uservalid == $user && $passvalid==$pass){
