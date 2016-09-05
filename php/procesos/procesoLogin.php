@@ -12,18 +12,16 @@
 
 	//DATOS DE ENTRADA
 
-	$uservalid="reaper";
-	$passvalid="123";
-
-<<<<<<< HEAD
 	$username = $_GET['username'];
 	$pass = $_GET['password'];
 
 
 	if($model->Captura_USR_PASS($username,$pass)){ 
-		$_SESSION['username'] = $user;
+		echo nl2br(" \n ");
+		echo nl2br(" \n ");
+		$_SESSION['username'] = $username;
 		echo "Bienvenid@ ";
-		echo $user;
+		echo $username;
 		echo nl2br(" \n ");
 
 		require_once '../paginas/Administrator.php';
@@ -41,11 +39,7 @@
 
 		<?php //Apertura del HTML
 	}
-	
-=======
-	$user = $_GET['username'];
-	$pass = $_GET['password'];
->>>>>>> d5f4cac5c8e385392c3accf9741a8e75bab18b80
+
 
 	/*
 	if($uservalid == $user && $passvalid==$pass){
