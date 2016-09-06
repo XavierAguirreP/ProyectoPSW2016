@@ -1,6 +1,4 @@
 <?php
-
-  //Start the session
   session_start();
 ?>
 
@@ -71,10 +69,24 @@
                 <li class="active"><a href="index.html#">Home</a></li>
                 <li><a href="pages/about.html#">About</a></li>
                 <li><a href="pages/products.html#">Products</a></li>
-				<li><a href="pages/events.html#">Events</a></li>
-				<li><a href="pages/ordenes.html#">Ordenes</a></li>
-				<li><a href="pages/login.html#">Login/Register</a></li> <!-- Este menu debe cambiar a mi cuenta cuando el user se logea -->
+        				<li><a href="pages/events.html#">Events</a></li>
+        				<li><a href="pages/ordenes.html#">Ordenes</a></li>
 
+                <!-- Este menu debe cambiar a mi cuenta cuando el user se logea -->
+
+                <?php
+                  if (! empty($_SESSION["username"])) 
+                  {
+                    echo "<li><a href="cerrarsesion.php" title="Cerrar sesión">Bienvenid@</a></li>" . 
+                    " $_SESSION["username"] )";
+                  }else{
+                    echo "<li><a href="pages/login.html#">Login/Register</a></li>"
+
+
+                  }
+                ?>
+
+				 
 
 
 				<!-- Diseño Dropdwn -->
@@ -295,7 +307,7 @@
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="js/bootstrap.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src=".js/holder.js"></script>
+    <script src="js/holder.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
 
