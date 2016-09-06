@@ -19,6 +19,13 @@
 	<br>
 	<a href="../paginas/Listar_roles.php">Listar_roles</a>
 
+	<br>
+	<br>
+	<br>
+	<br>
+	<a href="../../index.html">Regresar al sitio</a>
+
+
 
 </body>
 </html>
