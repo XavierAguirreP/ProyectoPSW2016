@@ -51,8 +51,8 @@
 				
 		}else if($tipo_user == 2){
 			echo "Usuario";
-			require_once '../../index.html';
-				
+			//require_once '../../index.html';
+			header("Location: ../../index.php");	
 		}else{
 			echo "Invitado";
 		}
