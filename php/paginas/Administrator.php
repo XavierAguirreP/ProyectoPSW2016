@@ -18,6 +18,16 @@
 	<br>
 	<br>
 	<a href="../paginas/Listar_roles.php">Listar_roles</a>
+	<br>
+	<br>
+	<a href="../paginas/listar_cabeceras.php">Listar cabeceras de orden</a>
+	<br>
+	<br>
+	<a href="../paginas/listar_detalles.php">Listar detalles de orden</a>
+	<br>
+	<br>
+	<a href="../paginas/listar_domicilios.php">Listar domicilios</a>
+
 
 
 </body>

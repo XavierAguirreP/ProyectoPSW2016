@@ -1,8 +1,6 @@
 <?php
 
-	require_once ("../clases/conexion.php");
-	require_once ("../clases/usuario.php");
-	require_once ("../clases/roles.php");
+	require_once ("conexion.php");
 
 	class colector{
 
@@ -35,7 +33,7 @@
 			}catch(Exception $e){
 				die($e->getMessage());
 			}
-		
+
 		}//END FUNCTION
 
 
@@ -43,15 +41,15 @@
 
 			try{
 
-				
+
 				$stm =  $this->con->prepare($cadena);
         		$stm->execute();
         		$count = $stm->rowCount();
         		//$count = $this->con->exec($cadena);
-		
+
          		$this->con->close_con();
         		return $count;
-        
+
 
 			}catch(Exception $e){
 				die($e->getMessage());
