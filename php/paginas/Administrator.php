@@ -29,6 +29,13 @@
 	<a href="../paginas/listar_domicilios.php">Listar domicilios</a>
 
 
+	<br>
+	<br>
+	<br>
+	<br>
+	<a href="../../index.html">Regresar al sitio</a>
+
+
 
 </body>
 </html>

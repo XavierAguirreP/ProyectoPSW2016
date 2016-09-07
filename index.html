@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 
 <html lang="es" class="no-js">
@@ -31,7 +35,7 @@
 		<!-- Internal -->
 
         <link rel="stylesheet" type="text/css" href="css/style.css" />
-		<link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
+		    <link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
 
 
 <!--===============ccs carrusel=========================-->
@@ -65,10 +69,24 @@
                 <li class="active"><a href="index.html#">Home</a></li>
                 <li><a href="pages/about.html#">About</a></li>
                 <li><a href="pages/products.html#">Products</a></li>
-				<li><a href="pages/events.html#">Events</a></li>
-				<li><a href="pages/ordenes.html#">Ordenes</a></li>
-				<li><a href="pages/login.html#">Login/Register</a></li> <!-- Este menu debe cambiar a mi cuenta cuando el user se logea -->
+        				<li><a href="pages/events.html#">Events</a></li>
+        				<li><a href="pages/ordenes.html#">Ordenes</a></li>
 
+                <!-- Este menu debe cambiar a mi cuenta cuando el user se logea -->
+
+                <?php
+                  if (! empty($_SESSION["username"])) 
+                  {
+                    echo "<li><a href="cerrarsesion.php" title="Cerrar sesión">Bienvenid@</a></li>" . 
+                    " $_SESSION["username"] )";
+                  }else{
+                    echo "<li><a href="pages/login.html#">Login/Register</a></li>"
+
+
+                  }
+                ?>
+
+				 
 
 
 				<!-- Diseño Dropdwn -->
@@ -110,162 +128,162 @@
                 <!-- <div id="container_demo" > --> <!-- Este container_demo dentro del CSS sera el estilo que se aplicara en esta seccion RECOMIENDO
 				 crear una clase en el css para que apliques tus propios estilos dentro del secmento -->
 
-<br>
+              <br>
 
 
-		<!-- Carousel
-    ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class=""></li>
-        <li class="active" data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item">
-          <img src="images/mo-in-c6.jpg" alt="First slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Dulces de Hanya</h1>
-              <p> Contamos con los mejores dulces para tus momentos especiales</p>
-            <!--  <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p> -->
+              		<!-- Carousel
+                  ================================================== -->
+                  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+                      <li class="active" data-target="#myCarousel" data-slide-to="1"></li>
+                      <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                      <div class="item">
+                        <img src="images/mo-in-c6.jpg" alt="First slide">
+                        <div class="container">
+                          <div class="carousel-caption">
+                            <h1>Dulces de Hanya</h1>
+                            <p> Contamos con los mejores dulces para tus momentos especiales</p>
+                          <!--  <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p> -->
 
-            </div>
-          </div>
-        </div>
-        <div class="item active">
-          <img src="images/mo-in-c2.jpg" alt="Second slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Para esa celebracion inolvidable</h1>
-              <p>Elaboramos nuestros productos con mucho amor y los mejores ingredientes para ti y tus seres queridos.</p>
-
-
-             <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p> -->
-
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="images/mo-in-c9.jpg" alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Personaliza tus pedidos</h1>
-              <p>Has realidad la fiesta de tus sueños con nuestros pasteles personalizados</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item active">
+                        <img src="images/mo-in-c2.jpg" alt="Second slide">
+                        <div class="container">
+                          <div class="carousel-caption">
+                            <h1>Para esa celebracion inolvidable</h1>
+                            <p>Elaboramos nuestros productos con mucho amor y los mejores ingredientes para ti y tus seres queridos.</p>
 
 
-    <!--          <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p> -->
+                           <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p> -->
 
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div><!-- /.carousel -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <img src="images/mo-in-c9.jpg" alt="Third slide">
+                        <div class="container">
+                          <div class="carousel-caption">
+                            <h1>Personaliza tus pedidos</h1>
+                            <p>Has realidad la fiesta de tus sueños con nuestros pasteles personalizados</p>
 
 
-    <!--===== abajo del carrusel 3 imagenes con info==============-->
+                  <!--          <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p> -->
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div><!-- /.carousel -->
 
 
-   <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
-    <div class="container marketing">
-
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-lg-4">
-          <img src="images/mo-in-2.jpg" alt="Generic placeholder image" height="250" width="350">
-          <h2>Tortas Personalizadas</h2>
-          <p>Relleno de Chocolate, decorado con chocolate galak, dulces M&M y mucho amor</p>
+                  <!--===== abajo del carrusel 3 imagenes con info==============-->
 
 
-<!--<p><a class="btn btn-default" href="#" role="button">View details »</a></p>-->
+                 <!-- Marketing messaging and featurettes
+                  ================================================== -->
+                  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+                  <div class="container marketing">
+
+                    <!-- Three columns of text below the carousel -->
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <img src="images/mo-in-2.jpg" alt="Generic placeholder image" height="250" width="350">
+                        <h2>Tortas Personalizadas</h2>
+                        <p>Relleno de Chocolate, decorado con chocolate galak, dulces M&M y mucho amor</p>
 
 
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img  src="images/mo-in-3.jpg" alt="Generic placeholder image" height="250" width="350">
-          <h2>Cupcakes</h2>
-          <p>Relleno de vainilla con durazno, cubierta de fondant, diseño personalizable,traje de doctor</p>
+              <!--<p><a class="btn btn-default" href="#" role="button">View details »</a></p>-->
 
 
-<!--  <p><a class="btn btn-default" href="#" role="button">View details »</a></p> -->
-
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img src="images/mo-in-6.jpg" alt="Generic placeholder image" height="250" width="350">
-          <h2>Bocaditos</h2>
-          <p>Pastel diseñado bajo el tema de Jack y los piratas</p>
-
-   <!-- <p><a class="btn btn-default" href="#" role="button">View details »</a></p> -->
-
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
-
-</div><!-- container marketing -->
+                      </div><!-- /.col-lg-4 -->
+                      <div class="col-lg-4">
+                        <img  src="images/mo-in-3.jpg" alt="Generic placeholder image" height="250" width="350">
+                        <h2>Cupcakes</h2>
+                        <p>Relleno de vainilla con durazno, cubierta de fondant, diseño personalizable,traje de doctor</p>
 
 
+              <!--  <p><a class="btn btn-default" href="#" role="button">View details »</a></p> -->
 
+                      </div><!-- /.col-lg-4 -->
+                      <div class="col-lg-4">
+                        <img src="images/mo-in-6.jpg" alt="Generic placeholder image" height="250" width="350">
+                        <h2>Bocaditos</h2>
+                        <p>Pastel diseñado bajo el tema de Jack y los piratas</p>
 
-   <!--==================fin 3 imagenes===========-->
+                 <!-- <p><a class="btn btn-default" href="#" role="button">View details »</a></p> -->
+
+                      </div><!-- /.col-lg-4 -->
+                    </div><!-- /.row -->
+
+              </div><!-- container marketing -->
 
 
 
-<!-- =================imagenes grandes====== -->
 
-<hr class="featurette-divider">
-
-
-
-    <div class="container marketing">
-
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-lg-4">
-          <img src="images/mo-in-b1.jpg" alt="Generic placeholder image" height="600" width="350">
-
-
-        </div><!-- /.col-lg-4 -->
-
- <div class="col-lg-4">
-          <img  src="images/mo-in-b4.jpg" alt="Generic placeholder image" height="600" width="350">
-
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img src="images/mo-in-b1.jpg" alt="Generic placeholder image" height="600" width="350">
-
-
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
+                 <!--==================fin 3 imagenes===========-->
 
 
 
-<!-- =================fin de imagenes grandes====== -->
+              <!-- =================imagenes grandes====== -->
+
+              <hr class="featurette-divider">
 
 
 
+                  <div class="container marketing">
+
+                    <!-- Three columns of text below the carousel -->
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <img src="images/mo-in-b1.jpg" alt="Generic placeholder image" height="600" width="350">
+
+
+                      </div><!-- /.col-lg-4 -->
+
+                      <div class="col-lg-4">
+                        <img  src="images/mo-in-b4.jpg" alt="Generic placeholder image" height="600" width="350">
+
+                      </div><!-- /.col-lg-4 -->
+                      <div class="col-lg-4">
+                        <img src="images/mo-in-b1.jpg" alt="Generic placeholder image" height="600" width="350">
+
+
+                      </div><!-- /.col-lg-4 -->
+                    </div><!-- /.row -->
+
+
+
+              <!-- =================fin de imagenes grandes====== -->
 
 
 
 
 
 
-					 <h2><a href="../page/index.html">Aqui debemos camellar</a></h2>
 
 
 
 
-                 </div>
+
+
+
+
+                  </div>
              </section>
 
          </div>
@@ -298,12 +316,6 @@
 
 
 <!--=====================fin de bootstrap core agregado -->
-
-
-
-
-
-
 
 </body>
  </html>

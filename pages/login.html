@@ -1,3 +1,7 @@
+<?php
+    session_start(); 
+?>
+
 <!DOCTYPE html>
 
 <html lang="en" class="no-js">
@@ -63,7 +67,7 @@
 					 
 					 <!-- ========================================= LOGIN DE LA PAGINA ========================================= -->
                          <div id="login" class="animate form">
-                             <form  action="../php/procesos/procesoLogin.php" autocomplete="on">  <!--archivo de ejecucion del login -->
+                             <form  action="../php/procesos/procesoLogin.php" autocomplete="on" >  <!--archivo de ejecucion del login -->
                                  <h2>Log in</h2> 
                                  <p> 
                                      <label for="username" class="uname" data-icon="u" > Your email or username </label>
@@ -94,26 +98,34 @@
  
 						<!-- ========================================= Register DE LA PAGINA ========================================= -->
                          <div id="register" class="animate form">
-                             <form  action="../index.html" autocomplete="on"> <!--archivo de ejecucion del registro -->
+                             <form  action="../php/procesos/procesoCreate_Usuario.php" autocomplete="on" method="POST"> <!--archivo de ejecucion del registro -->
                                  <h2> Sign up </h2> 
 								 <br>
                                  <p> 
                                      <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
-                                     <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
+                                     <input id="nombre" name="nombre" required="required" type="text" placeholder="mysuperusername690" />
                                  </p>
+
+                                 <!--   Omicion del campo EMAIL por ser inecesario a la hora de crear nuevo usuario
                                  <p> 
                                      <label for="emailsignup" class="youmail" data-icon="e" > Your email</label>
                                      <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com"/> 
                                  </p>
+                                 -->
+
                                  <p> 
                                      <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
-                                     <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                                     <input id="pass" name="pass" required="required" type="password" placeholder="eg. X8df!90EO"/>
                                  </p>
+
+                                <!-- Solo se usara 1 caja de texto 
                                  <p> 
                                      <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
                                      <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
                                  </p>
-								 
+                                 -->
+
+								 <!--  Eliminacion de datos de mas
 								 <h2> Datos de usuario </h2> 
 								 <br>
 								 
@@ -131,7 +143,7 @@
                                      <label for="cedulagnup" class="uname" data-icon="u">Cedula</label>
                                      <input id="cedulagnup" name="cedulagnup" required="required" type="text" placeholder="0952544545" />
                                  </p>
-								 
+								  -->
 								 
 								 <!-- Boton de ENVIAR DATOS REGISTRO -->
                                  <p class="signin button"> 
