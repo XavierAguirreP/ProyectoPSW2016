@@ -1,10 +1,11 @@
 <?php
 session_start();
 if(!isset($_SESSION['login'])){
-  header("Location: http://localhost/prueba/admin/login/");
+  header("Location: http://localhost/php/paginas/login.html");
   exit();
 }
-require '../colectores/cabeceraOrdenColector.php';
+require_once '../clases/cabeceraOrdenColector.php';
+require_once'../clases/cabeceraOrden.php';
 
     $coll = new CabeceraOrdenColector();
 
@@ -13,7 +14,7 @@ if(isset($_GET["id"])){
     $obj = $coll->ConsultarCabeceraOrden($_GET["id"]);
 
     ?>
-    <form enctype="multipart/form-data" action="editarCabeceraOrden.php" method="post">
+    <form enctype="multipart/form-data" action="../procesos/procesoUpdate_cabecera_orden.php" method="post">
     <input type="hidden" id="id" name="id" value="<?php echo $obj->getId(); ?>"/>
         <div>
             <label for="idCliente">ID cliente</label>
@@ -40,28 +41,8 @@ if(isset($_GET["id"])){
             <button type="submit">Actualizar</button>
         </div>
     </form>
-
-   <?php
-}else if(isset($_POST["id"]) && isset($_POST["idCliente"])&& isset($_POST["fechaEntrega"])&& isset($_POST["fechaEmision"])&& isset($_POST["estado"])&& isset($_POST["iva"])){
-
-    $obj = new CabeceraOrden();
-    $obj->setIdCliente($_POST["idCliente"]);
-    $obj->setFechaEntrega($_POST["fechaEntrega"]);
-    $obj->setFechaEmision($_POST["fechaEmision"]);
-    $obj->setEstado($_POST["estado"]);
-    $obj->setIva($_POST["iva"]);
-
-            if($coll->UpdateCabeceraOrden($obj)){
-              //var_dump($obj);
-              header("Location: http://localhost/prueba/admin/clases-php/mostrar/indexCabeceras.php");
-              exit();
-            }else{
-                echo "Hubo un error al intentar actualizar la cabecera.";
-            }
-
-
-}else{
-    header("Location: http://localhost/prueba/admin/clases-php/login");
-    exit();
+<?php
+} else {
+  header("Location: http://localhost/php/paginas/login.html");
+  exit();
 }
-?>

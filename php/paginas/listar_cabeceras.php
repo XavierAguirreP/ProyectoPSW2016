@@ -37,15 +37,15 @@ require_once '../clases/cabeceraOrdenColector.php';
                        <td> <?php echo $datos->getFechaEntrega(); ?> </td>
                        <td> <?php echo $datos->getEstado(); ?> </td>
                        <td> <?php echo $datos->getIva(); ?> </td>
-                       <td><a href="../formularios/frm_editarCabeceraOrden.php?id=<?php echo $datos->getId();?>"> Editar</a>  </td>
-                       <td><a href="../formularios/frm_eliminarCabeceraOrden.php?id=<?php echo $datos->getId();?>"> Eliminar</a>  </td>
+                       <td><a href="../formularios/frm_Update_cabecera_orden.php?id=<?php echo $datos->getId();?>"> Editar</a>  </td>
+                       <td><a href="../formularios/frm_Eliminar_cabecera_orden.php?id=<?php echo $datos->getId();?>"> Eliminar</a>  </td>
                      </tr>
                    <?php
             }
             ?>
 
           <tr>
-            <td colspan=4><a href="../formularios/frm_crearCabeceraOrden.php">Crear cabecera de orden</a></td>
+            <td colspan=4><a href="../formularios/frm_Create_cabecera_orden.php">Crear cabecera de orden</a></td>
           </tr>
 
 </table>

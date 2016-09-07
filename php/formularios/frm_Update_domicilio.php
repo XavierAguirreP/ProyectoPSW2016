@@ -1,10 +1,11 @@
 <?php
 session_start();
-if(!isset($_SESSION['login'])){
-  header("Location: http://localhost/prueba/admin/login/");
+if(!isset($_SESSION['username'])){
+  header("Location: http://localhost/php/paginas/login.html");
   exit();
 }
-require '../colectores/domicilioColector.php';
+require_once '../clases/domicilioColector.php';
+require_once'../clases/doomicilio.php';
 
     $coll = new DemoCollector();
 
@@ -13,7 +14,7 @@ if(isset($_GET["id"])){
     $obj = $coll->ConsultarDomicilio($_GET["id"]);
 
     ?>
-    <form enctype="multipart/form-data" action="editarDomicilio.php" method="post">
+    <form enctype="multipart/form-data" action="../procesos/procesoUpdate_domicilio.php" method="post">
     <input type="hidden" id="id" name="id" value="<?php echo $obj->getId(); ?>"/>
         <div>
             <label for="direccionDescriptiva">Direccion descriptiva</label>
@@ -36,25 +37,4 @@ if(isset($_GET["id"])){
     </form>
 
    <?php
-}else if(isset($_POST["id"]) && isset($_POST["direccionDescriptiva"])&& isset($_POST["callePrincipal"])&& isset($_POST["calleSecundaria"])&& isset($_POST["numeracion"])){
-
-    $obj = new Domicilio();
-    $obj->setDireccionDescriptiva($_POST["direccionDescriptiva"]);
-    $obj->setCallePrincipal($_POST["callePrincipal"]);
-    $obj->setCalleSecundaria($_POST["calleSecundaria"]);
-    $obj->setNumeracion($_POST["numeracion"]);
-
-            if($coll->UpdateDomicilio($obj)){
-              //var_dump($obj);
-              header("Location: http://localhost/prueba/admin/clases-php/mostrar/indexDomicilios.php");
-              exit();
-            }else{
-                echo "Hubo un error al intentar actualizar el domicilio.";
-            }
-
-
-}else{
-    header("Location: http://localhost/prueba/admin/clases-php/login");
-    exit();
 }
-?>

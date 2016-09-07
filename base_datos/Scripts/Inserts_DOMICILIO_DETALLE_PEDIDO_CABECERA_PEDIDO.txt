@@ -1,0 +1,17 @@
+-->Domicilio: Urb. Castilla mz 15 villa 21, entre callejones 5 y 10, Vía Samborondón
+
+INSERT INTO public.domicilio(
+            id, direccion_descriptiva, calle_principal, calle_secundaria, 
+            numeracion_casa, nombre_sector)
+    VALUES (0001, 'Urb Castilla mz 15 villa 21', 'callejon 5', 'callejon 10', 
+            1521, 'Vía Samborondon');
+
+-->Cabecera de pedido
+INSERT INTO public.cabecera_orden_pedido(
+            id, fecha_emision, fecha_entrega, id_cliente, estado, iva)
+    VALUES (110000, '07,09,2016', '09,09,2016', 11111, 'pendiente', 12);
+
+-->Detalle de pedido
+INSERT INTO public.det_orden_pedido(
+            id_cabecera_orden, linea, cantidad, id_producto, subtotal)
+    VALUES (110000, '100', 1, 123456, 7.28);
