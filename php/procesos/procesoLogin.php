@@ -25,7 +25,7 @@
 	if($model->Captura_USR_PASS($username,$pass)){ 
 		echo nl2br(" \n ");
 		echo nl2br(" \n ");
-		$_SESSION['username'] = $username;
+		$_SESSION["username"] = $username;
 		echo "Bienvenid@ ";
 		echo $username;
 		echo nl2br(" \n ");
