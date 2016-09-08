@@ -2,6 +2,7 @@
 class telefono {  
    private $id;  
    private $numero; 
+   private $id_estado;	
     	  
   
    function __construct() {  
@@ -26,6 +27,14 @@ class telefono {
    public function setNumero($numero) {  
      $this->numero = $numero;  
    }  
+   
+   public function getId_estado() {  
+     return $this->id_estado;  
+   }  
+   public function setId_estado($id_estado) {  
+     $this->id_estado = $id_estado;  
+   }	
+	
 
  }
  ?>

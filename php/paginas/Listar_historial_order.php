@@ -6,7 +6,7 @@ require_once("../clases/historialColector.php");
 $alm = new historial_order();
 $model = new historialColector();
 
-
+$id= 0;
 ?>
 
 <!DOCTYPE html>
@@ -45,8 +45,8 @@ $model = new historialColector();
                             <td><?php echo $r->getLinea(); ?></td>  
                             <td><?php echo $r->getId_cabecera_order(); ?></td>
                             
-			<td><a href= "frm_actualizarHistorial.php?id_cliente=<?php echo $r->getId_cliente(); ?> ">Editar</a></td>
-         		<td><a href="borrarHistorial.php?id_cliente=<?php echo $r->getId_cliente(); ?>">Eliminar</a></td>
+			<td><a href= "../formularios/frm_Update_historial.php?id_cliente=<?php echo $r->getId_cliente(); ?> ">Editar</a></td>
+         		<td><a href="../procesos/proceso_Delete_historial.php?id_cliente=<?php echo $r->getId_cliente(); ?>">Eliminar</a></td>
 										
 			                         
                         </tr>

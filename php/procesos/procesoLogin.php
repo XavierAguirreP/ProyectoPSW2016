@@ -14,13 +14,7 @@
 
 	$username = $_GET['username'];
 	$pass = $_GET['password'];
-	$tipo_user= "";
 
-	
-	
-
-
-	//PROCESO LOGIN
 
 	if($model->Captura_USR_PASS($username,$pass)){ 
 		echo nl2br(" \n ");
@@ -29,36 +23,8 @@
 		echo "Bienvenid@ ";
 		echo $username;
 		echo nl2br(" \n ");
-		echo nl2br(" \n ");
 
-		//$result->set_Id_tipo_usuario($model->Captura_TIP_USER($username));
-		
-		//$tipo_user = $result->get_Id_tipo_usuario();
-
-		$tipo_user = $model->Captura_TIP_USER($username);
-
-		
-
-		echo $tipo_user;
-
-		
-
-		
-		//echo $tipo_user;
-		if($tipo_user == 1){
-			echo "Administrador";
-			require_once '../paginas/Administrator.php';
-				
-		}else if($tipo_user == 2){
-			echo "Usuario";
-			//require_once '../../index.html';
-			header("Location: ../../index.php");	
-		}else{
-			echo "Invitado";
-		}
-		
-
-		
+		require_once '../paginas/Administrator.php';
 		
 	
 	} else {
@@ -69,7 +35,7 @@
 		<!-- CODIGO HTML -->		
 		<br>
 		<br>
-		<a href="../../index.html">Volver</a>
+		<a href="ProyectoPSW2016/index.html">Volver</a>
 
 		<?php //Apertura del HTML
 	}

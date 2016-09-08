@@ -6,7 +6,7 @@ require_once ('../clases/telefono.php');
 $alm = new telefono();
 $model = new telefonoColector();
 
-
+$id= 0;
 ?>
 
 <!DOCTYPE html>
@@ -22,11 +22,12 @@ $model = new telefonoColector();
 			<a href = "../formularios/Frm_Create_telefono.php">crear</a>       
 			<br>
 			<br>	
-                <table class="pure-table pure-table-horizontal" border = 1 >
+                <table class="pure-table pure-table-horizontal" border = "1" >
                     <thead>
                        <tr>
 		            <th style="text-align:left;">Id</th>
                 	    <th style="text-align:left;">Numero</th>
+			    <th style="text-align:left;">Id estado</th>
                 
                 	    <th style="text-align:left;">opcion</th>
                             <th style="text-align:left;">opcion</th>
@@ -38,10 +39,11 @@ $model = new telefonoColector();
                     <?php foreach($model->ListarTelefono() as $r): ?>
                         <tr>
                             <td><?php echo $r->getId(); ?></td>
-                            <td><?php echo $r->getNumero(); ?></td>  
+                            <td><?php echo $r->getNumero(); ?></td> 
+			    <td><?php echo $r->getId_estado(); ?></td>	 
                             
-			<td><a href= "frm_actualizarTelefono.php?id=<?php echo $r->getId(); ?>">Editar</a></td>
-         		<td><a href="borrarTelefono.php?id=<?php echo $r->getId(); ?>">Eliminar</a></td>
+			<td><a href= "../formularios/frm_UPdate_telefono.php?id=<?php echo $r->getId(); ?>">Editar</a></td>
+         		<td><a href="../procesos/proceso_Delete_telefono.php?id=<?php echo $r->getId(); ?>">Eliminar</a></td>
 										
 			                         
                         </tr>

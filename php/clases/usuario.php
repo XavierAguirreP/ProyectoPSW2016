@@ -9,13 +9,8 @@ class usuario{
 	private $id_rol;
 
 	//Constructor
-    //MODIFICACION - MAPEO DE OBJETO
-	function __construct() {
-        $this->id = $this->get_Id();
-        $this->nombre_usuario = $this->get_Nombre_usuario();
-        $this->pass = $this->get_Pass();
-        $this->id_tipo_usuario = $this->get_Id_tipo_usuario();
-        $this->id_rol = $this->get_Id_rol();
+
+	function __construct() {  
     
     }
 

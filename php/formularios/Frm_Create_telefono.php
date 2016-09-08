@@ -14,12 +14,18 @@ $model = new telefonoColector();
 </head>
 <body style="padding:15px;">
 	<h2>** Nuevo Telefono ** </h2>
-	<form id="principal" action="procesoCrearTelefono.php" method="GET">
+	<form id="principal" action="../procesos/procesoCreate_Telefono.php" method="GET">
 		<div>
 			<br>
 			<label>Numero: </label>
 			<br>
 			<input type="text" name="numero">
+		</div>
+		<div>
+			<br>
+			<label>Id estado: </label>
+			<br>
+			<input type="text" name="id_estado">
 		</div>
 		<div>
 			<br>

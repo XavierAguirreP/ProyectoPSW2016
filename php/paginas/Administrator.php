@@ -18,12 +18,17 @@
 	<br>
 	<br>
 	<a href="../paginas/Listar_roles.php">Listar_roles</a>
+	<br>
+	<br>
+	
+	<a href="../paginas/Listar_evento.php">Listar_Evento</a>
+	<br>
+	<br>
 
+	<a href="../paginas/Listar_historial_order.php">Listar_historial_order</a>
 	<br>
 	<br>
-	<br>
-	<br>
-	<a href="../../index.html">Regresar al sitio</a>
+	<a href="../paginas/Listar_telefono.php">Listar_telefono</a>
 
 
 

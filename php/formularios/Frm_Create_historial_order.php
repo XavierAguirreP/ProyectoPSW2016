@@ -14,7 +14,7 @@ $model = new historialColector();
 </head>
 <body style="padding:15px;">
 	<h2>** Nuevo Historial ** </h2>
-	<form id="principal" action="procesoCrearHistorial.php" method="GET">
+	<form id="principal" action="../procesos/procesoCreate_Historial.php" method="GET">
 		<div>
 			<br>
 			<label>Linea: </label>
