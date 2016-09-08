@@ -12,7 +12,7 @@ $id= 0;
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<title>Evento List</title>       
+		<title>Listar Evento</title>       
 	</head>
     <body style="padding:15px;">
 		<h2>*** EVENTO LIST **</h2>
@@ -56,8 +56,8 @@ $id= 0;
 
 
 
-			<td><a href= "frm_actualizarEvento.php?id=<?php echo $r->getId(); ?> ">Editar</a></td>
-         		<td><a href="borrarEvento.php?id=<?php echo $r->getId(); ?>">Eliminar</a></td>
+			<td><a href= "../formularios/frm_Update_evento.php?id=<?php echo $r->getId(); ?> ">Editar</a></td>
+         		<td><a href="../procesos/proceso_Delete_evento.php?id=<?php echo $r->getId(); ?>">Eliminar</a></td>
 										
 			                         
                         </tr>

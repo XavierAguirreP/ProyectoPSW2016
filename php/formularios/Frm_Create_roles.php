@@ -17,7 +17,7 @@
 <body style="padding:15px;">
 
 	<form action="../procesos/procesoCreate_roles.php" method="POST">
-
+		
 
 		<div>
 			<br>
@@ -27,7 +27,7 @@
 				<option value="TRUE">TRUE</option>
 				<option value="FALSE">FALSE</option>
 			</select>
-
+			
 		</div>
 
 		<div>
@@ -57,7 +57,7 @@
 				<option value="TRUE">TRUE</option>
 				<option value="FALSE">FALSE</option>
 			</select>
-
+			
 		</div>
 
 		<div>
@@ -67,11 +67,11 @@
 			<br>
 			<a href="../paginas/Listar_roles.php">Volver</a>
 		</div>
-
+		
 
 	</form>
 
-
+	
 
 
 
