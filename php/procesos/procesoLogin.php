@@ -17,12 +17,12 @@
 
 
 	if($model->Captura_USR_PASS($username,$pass)){ 
-		//echo nl2br(" \n ");
-		//echo nl2br(" \n ");
+		echo nl2br(" \n ");
+		echo nl2br(" \n ");
 		$_SESSION['username'] = $username;
-		//echo "Bienvenid@ ";
-		//echo $_SESSION['username'];
-		//echo nl2br(" \n ");
+		echo "Bienvenid@ ";
+		echo $_SESSION['username'];
+		echo nl2br(" \n ");
 
 		(header("location: ../paginas/Administrator.php")) ;
 		
