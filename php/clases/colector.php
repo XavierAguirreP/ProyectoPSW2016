@@ -1,8 +1,8 @@
 <?php
 
 	require_once ("../clases/conexion.php");
-	require_once ("../clases/usuario.php");
-	require_once ("../clases/roles.php");
+	//require_once ("../clases/usuario.php");
+	//require_once ("../clases/roles.php");
 
 	class colector{
 

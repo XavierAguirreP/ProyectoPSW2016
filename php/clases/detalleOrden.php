@@ -1,15 +1,20 @@
 <?php
-  public class DetalleOrden{
+  class DetalleOrden{
 
     private $idCabecera;
     private $idProducto;
     private $cantidad;
     private $subtotal;
-    private $linea,
+    private $linea;
 
-    public function __construct(){
+    function __construct(){
 
     }
+
+    function __clone() {  
+     $this->idCabecera = ++$this->idCabecera;   
+    }
+
     public function getLinea(){
       return $this->linea;
     }
