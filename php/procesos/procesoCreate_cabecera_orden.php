@@ -6,7 +6,7 @@ if(!isset($_SESSION['username'])){
 }
 
 require_once '../clases/cabeceraOrdenColector.php';
-require_once '../clases/CabeceraOrden.php';
+require_once '../clases/cabeceraOrden.php';
 if(isset($_POST["idCliente"]) && isset($_POST["fechaEmision"]) && isset($_POST["fechaEntrega"]) && isset($_POST["estado"]) && isset($_POST["iva"])){
   $vCollector = new CabeceraOrdenColector();
 
@@ -38,7 +38,7 @@ else{
   	<title>PROCESO - CREATE - CABECERA DE ORDEN</title>
   </head>
   <body>
-  	<a href="../paginas/Listar_cabecera_orden.php">Volver</a>
+  	<a href="../paginas/Listar_cabeceras.php">Volver</a>
 
   </body>
   </html>

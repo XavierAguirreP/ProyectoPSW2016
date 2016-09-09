@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['username'])){
-  header("Location: http://localhost/php/paginas/login.html");
+  header("Location: http:../php/paginas/login.html");
   exit();
 }
 
@@ -38,7 +38,7 @@ require_once '../clases/detalleOrdenColector.php';
             ?>
 
           <tr>
-            <td colspan=4><a href="../formularios/frm_crearDetalleOrden.php">Crear detalle de orden</a></td>
+            <td colspan=4><a href="../formularios/frm_Create_detalleOrden.php">Crear detalle de orden</a></td>
           </tr>
 
 </table>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['username'])){
-  header("Location: http://localhost/php/paginas/login.html"); //editar path
+  header("Location: http:../php/paginas/login.html"); //editar path
   exit();
 }
 require_once '../clases/detalleOrdenColector.php';
@@ -14,7 +14,7 @@ require_once '../clases/detalleOrden.php';
   </head>
 
   <body>
-    <form enctype="multipart/form-data"  action="procesoCreate_detalle_orden.php" method="post">
+    <form enctype="multipart/form-data"  action="../procesos/procesoCreate_detalle_orden.php" method="post">
       <div>
         <label for="cantidad">Nueva cantidad </label>
         <input type="text" name="cantidad" value="30"><br>

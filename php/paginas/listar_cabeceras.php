@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['username'])){
-  header("Location: http://localhost/php/paginas/login.html");
+  header("Location: http:../php/paginas/login.html");
   exit();
 }
 require_once '../clases/cabeceraOrden.php';
@@ -38,7 +38,7 @@ require_once '../clases/cabeceraOrdenColector.php';
                        <td> <?php echo $datos->getEstado(); ?> </td>
                        <td> <?php echo $datos->getIva(); ?> </td>
                        <td><a href="../formularios/frm_Update_cabecera_orden.php?id=<?php echo $datos->getId();?>"> Editar</a>  </td>
-                       <td><a href="../formularios/frm_Eliminar_cabecera_orden.php?id=<?php echo $datos->getId();?>"> Eliminar</a>  </td>
+                       <td><a href="../procesos/proceso_Delete_Cabecera_Orden.php?id=<?php echo $datos->getId();?>"> Eliminar</a>  </td>
                      </tr>
                    <?php
             }

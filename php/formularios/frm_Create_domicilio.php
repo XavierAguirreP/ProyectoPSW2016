@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['username'])){
-  header("Location: http://localhost/php/paginas/login.html"); //editar path
+  header("Location: http:../php/paginas/login.html"); //editar path
   exit();
 }
 require_once '../clases/domicilioColector.php';

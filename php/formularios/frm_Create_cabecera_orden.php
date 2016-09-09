@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['username'])){
-  header("Location: http://localhost/php/paginas/login.html"); //editar path
+  header("Location: http:../php/paginas/login.html"); //editar path
   exit();
 }
 require_once '../clases/cabeceraOrdenColector.php';
@@ -16,7 +16,7 @@ require_once '../clases/CabeceraOrden.php';
   </head>
 
   <body>
-    <form enctype="multipart/form-data"  action="procesoCreate_cabecera_orden.php" method="post">
+    <form enctype="multipart/form-data"  action="../procesos/procesoCreate_cabecera_orden.php" method="post">
       <div>
         <label for="idCliente">Nuevo id de cliente </label>
         <input type="text" name="idCliente" value="001"><br>
@@ -31,7 +31,7 @@ require_once '../clases/CabeceraOrden.php';
       </div>
       <div>
         <label for="estado">Estado </label>
-        <input type="text" name="estado" value="pendiente"><br>
+        <input type="text" name="estado" value="cancelado"><br>
       </div>
       <div>
         <label for="iva">Iva </label>

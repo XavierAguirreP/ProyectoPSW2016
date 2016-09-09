@@ -1,7 +1,7 @@
 <?php
 session_start();
-if(!isset($_SESSION['login'])){
-  header("Location: http://localhost/php/paginas/login.html");
+if(!isset($_SESSION['username'])){
+  header("Location: http:../php/paginas/login.html");
   exit();
 }
 require_once '../clases/cabeceraOrdenColector.php';
@@ -43,6 +43,6 @@ if(isset($_GET["id"])){
     </form>
 <?php
 } else {
-  header("Location: http://localhost/php/paginas/login.html");
+  header("Location: http:../php/paginas/login.html");
   exit();
 }

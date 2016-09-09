@@ -1,13 +1,13 @@
 <?php
 session_start();
 if(!isset($_SESSION['username'])){
-  header("Location: http://localhost/php/paginas/login.html");
+  header("Location: http:../php/paginas/login.html");
   exit();
 }
 require_once '../clases/domicilioColector.php';
-require_once'../clases/doomicilio.php';
+require_once'../clases/domicilio.php';
 
-    $coll = new DemoCollector();
+    $coll = new DomicilioColector();
 
 if(isset($_GET["id"])){
 
