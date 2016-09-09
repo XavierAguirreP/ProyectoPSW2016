@@ -5,8 +5,9 @@ session_start();
   //header("Location: ../../login.html");
   //exit();
 //}
-require_once '../clases/cabeceraOrden.php';
-require_once '../clases/cabeceraOrdenColector.php';
+require_once ("../clases/conexion.php");
+require_once ("../clases/cabeceraOrden.php");
+require_once ("../clases/cabeceraOrdenColector.php");
     
     $alm = new CabeceraOrden();
     $colector= new CabeceraOrdenColector();

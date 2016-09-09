@@ -1,7 +1,7 @@
 <?php //Reutilizador de Objetos del proyecto
 
 require_once("../clases/colector.php");
-require_once("../clases/cabeceraOrden.php"); //Segun la tabla a Usar
+//require_once("../clases/cabeceraOrden.php"); //Segun la tabla a Usar
 
 class CabeceraOrdenColector //instanciable
 {
@@ -23,8 +23,8 @@ public function ListarCabeceras()
 	{
 		try
 		{
-      $tabla="cabecera_orden_pedido";
-		    $result= $this->modelo->Listar($tabla);
+      		//$tabla="cabecera_orden_pedido";
+		    $result= $this->modelo->Listar("cabecera_orden_pedido");
 
 			return $result;
 		}
