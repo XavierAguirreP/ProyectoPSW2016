@@ -1,10 +1,11 @@
 <?php
 session_start();
-if(!isset($_SESSION['username'])){
-  header("Location: http:../php/paginas/login.html");
-  exit();
-}
+//if(!isset($_SESSION['username'])){
+  //header("Location: http:../php/paginas/login.html");
+  //exit();
+//}
 
+require_once("../clases/conexion.php");
 require_once '../clases/detalleOrden.php';
 require_once '../clases/detalleOrdenColector.php';
 
@@ -16,8 +17,8 @@ require_once '../clases/detalleOrdenColector.php';
      </head>
      <body>
        <?php
-       echo "Hola ".$_SESSION['username'];
-       echo"<a href=Administrator.php> Volver</a>";
+       //echo "Hola ".$_SESSION['username'];
+       //echo"<a href=Administrator.php> Volver</a>";
         ?>
         <table class="datos">
           <?php

@@ -18,7 +18,7 @@
 	$fk_categoria = $_POST['categoria'];
 
 	if (isset($precio_producto)==null){
-		$precio_producto = 25,00;
+		$precio_producto = 25.00;
 	}else{
 		$precio_producto = $_POST['precio'];
 	}
