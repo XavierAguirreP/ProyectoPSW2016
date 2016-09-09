@@ -1,7 +1,7 @@
 <?php
 
-require_once("colector.php");
-require_once("historial_order.php");
+require_once("../clases/colector.php");
+
 
 class historialColector
 
@@ -35,7 +35,7 @@ public function ListarHistorial()
  {
  	try
 		{
-		    $result= $this->modelo->operacion("INSERT INTO historial(linea, id_cabecera_order) values('".$linea."','".$id_cabecera_order."')");
+		    $result= $this->modelo->operacion("INSERT INTO historial_order(linea, id_cabecera_order) values('".$linea."','".$id_cabecera_order."')");
                 echo "se inserto registro $linea";
                 	return $result;
                 }

@@ -94,25 +94,6 @@
 
 		}//END CAPTURA
 
-
-
-		// PROCESO DE CAPTURA DE TIPO DE USUARIO
-
-		public function Captura_TIP_USER($nombre){
-
-			try{
-
-				$result = $this->modelo->operacion("SELECT id_tipo_usuario FROM usuario where nombre_usuario='".$nombre."'  ");
-
-				return $result;
-
-			}catch(Exception $e){
-				die($e->getMessage());
-
-			}
-
-		}//END CAPTURA
-
 		
 
 	}//END CLASS

@@ -14,7 +14,7 @@ $model = new eventoColector();
 </head>
 <body style="padding:15px;">
 	<h2>** Nuevo Evento ** </h2>
-	<form id="principal" action="procesoCrearEvento.php" method="GET">
+	<form id="principal" action="../procesos/procesoCreate_Evento.php" method="GET">
 		<div>
 			<br>
 			<label>Tipo de Evento: </label>

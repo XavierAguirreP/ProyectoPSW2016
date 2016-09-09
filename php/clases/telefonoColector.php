@@ -1,7 +1,7 @@
 <?php
 
-require_once("colector.php");
-require_once("telefono.php");
+require_once("../clases/colector.php");
+
 
 class telefonoColector
 
@@ -31,11 +31,11 @@ public function ListarTelefono()
 	}
  
  
- public function InsertTelefono($numero)
+ public function InsertTelefono($numero, $id_estado)
  {
  	try
 		{
-		    $result= $this->modelo->operacion("INSERT INTO telefono(numero) values('".$numero."')");
+		    $result= $this->modelo->operacion("INSERT INTO telefono(numero, id_estado) values('".$numero."','".$id_estado."' )");
                 echo "se inserto registro  $numero";
                 	return $result;
                 }
@@ -45,11 +45,11 @@ public function ListarTelefono()
 		}
  	}
  
- public function UpdateTelefono($id,$numero)
+ public function UpdateTelefono($id,$numero,$id_estado)
  {
  	try
 		{
-		    $result= $this->modelo->operacion("UPDATE telefono SET numero = '".$numero."' WHERE id ='".$id."' ");
+		    $result= $this->modelo->operacion("UPDATE telefono SET numero = '".$numero."',id_estado = '".$id_estado."' WHERE id ='".$id."' ");
                      
 			return $result;
 		}
