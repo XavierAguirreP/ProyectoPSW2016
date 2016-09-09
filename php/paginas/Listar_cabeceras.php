@@ -1,12 +1,14 @@
 <?php
 session_start();
-if(!isset($_SESSION['username'])){
-  header("Location: http:../php/paginas/login.html");
-  exit();
-}
+
+//if(!isset($_SESSION['username'])){
+  //header("Location: ../../login.html");
+  //exit();
+//}
 require_once '../clases/cabeceraOrden.php';
 require_once '../clases/cabeceraOrdenColector.php';
-
+    
+    $alm = new CabeceraOrden();
     $colector= new CabeceraOrdenColector();
 ?>
 <!Doctype html>
@@ -15,8 +17,8 @@ require_once '../clases/cabeceraOrdenColector.php';
      </head>
      <body>
        <?php
-       echo "Hola ".$_SESSION['username'];
-       echo"<a href=Administrator.php> Salir</a>";
+       //echo "Hola ".$_SESSION['username'];
+       echo"<a href=../paginas/Administrator.php> Salir</a>";
         ?>
         <table class="datos">
           <tr>
