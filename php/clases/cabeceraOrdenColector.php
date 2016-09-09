@@ -1,7 +1,7 @@
 <?php //Reutilizador de Objetos del proyecto
 
-require_once("colector.php");
-require_once("cabeceraOrden.php"); //Segun la tabla a Usar
+require_once("../clases/colector.php");
+require_once("../clases/cabeceraOrden.php"); //Segun la tabla a Usar
 
 class CabeceraOrdenColector //instanciable
 {
