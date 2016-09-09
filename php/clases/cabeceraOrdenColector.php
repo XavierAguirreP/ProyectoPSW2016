@@ -39,7 +39,7 @@ public function ListarCabeceras()
  {
  try
 		{
-		    $result= $this->modelo->operacion("INSERT into cabecera_orden_pedido(id, id_cliente, fecha_emision, fecha_entrega, estado,iva) VALUES ('".$cabecera->getId()."', '".$cabecera->getIdCliente()."', '".$cabecera->getFechaEmision()."', '".$cabecera->getFechaEntrega()."', '".$cabecera->getEstado()."', '".$cabecera->getIva()."' )");
+		    $result= $this->modelo->operacion("INSERT into cabecera_orden_pedido(id_cliente, fecha_emision, fecha_entrega, estado,iva) VALUES ('".$cabecera->getIdCliente()."', '".$cabecera->getFechaEmision()."', '".$cabecera->getFechaEntrega()."', '".$cabecera->getEstado()."', '".$cabecera->getIva()."' )");
 
 			return $result;
 		}

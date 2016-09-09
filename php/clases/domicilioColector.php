@@ -1,6 +1,6 @@
 <?php //Reutilizador de Objetos del proyecto
 
-require_once("../php/colector.php");
+require_once("colector.php");
 require_once("domicilio.php"); //Segun la tabla a Usar
 
 class DomicilioColector //instanciable
@@ -39,7 +39,7 @@ public function ListarDomicilios()
  {
  try
 		{
-		    $result= $this->modelo->operacion("INSERT into domicilio (id, direccion_descriptiva, calle_principal, calle_secundaria, numeracion_casa) values ('".$direccion->getId()."', '".$direccion->getDireccionDescriptiva()."', '".$direccion->getCallePrincipal()."', '".$direccion->getCalleSecundaria()."', '".$direccion->getNumeracion()."' )");
+		    $result= $this->modelo->operacion("INSERT into domicilio (direccion_descriptiva, calle_principal, calle_secundaria, numeracion_casa) values ( '".$direccion->getDireccionDescriptiva()."', '".$direccion->getCallePrincipal()."', '".$direccion->getCalleSecundaria()."', '".$direccion->getNumeracion()."' )");
 
 			return $result;
 		}
