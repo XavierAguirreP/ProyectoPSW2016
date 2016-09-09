@@ -17,14 +17,14 @@
 
 
 	if($model->Captura_USR_PASS($username,$pass)){ 
-		echo nl2br(" \n ");
-		echo nl2br(" \n ");
-		$_SESSION["username"] = $username;
-		echo "Bienvenid@ ";
-		echo $username;
-		echo nl2br(" \n ");
+		//echo nl2br(" \n ");
+		//echo nl2br(" \n ");
+		$_SESSION['username'] = $username;
+		//echo "Bienvenid@ ";
+		//echo $_SESSION['username'];
+		//echo nl2br(" \n ");
 
-		require_once '../paginas/Administrator.php';
+		(header("location: ../paginas/Administrator.php")) ;
 		
 	
 	} else {
@@ -35,7 +35,7 @@
 		<!-- CODIGO HTML -->		
 		<br>
 		<br>
-		<a href="ProyectoPSW2016/index.html">Volver</a>
+		<a href="../../index.html">Volver</a>
 
 		<?php //Apertura del HTML
 	}
