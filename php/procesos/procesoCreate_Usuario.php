@@ -12,17 +12,19 @@
 	$pass = $_POST['pass'];
 
 
-	if (isset($_POST['tipo_user'])==null){
-		$id_tipo_user = 2;
-	}else{
+	if (isset($_POST['tipo_user'])!==null){
 		$id_tipo_user = $_POST['tipo_user']; 
+		
+	}else{
+		$id_tipo_user = 2;
 	}
 
 
-	if (isset($id_rol = $_POST['rol'])==null){
-		$id_rol = 2;
-	}else{
+	if (isset($id_rol = $_POST['rol'])!==null){
 		$id_rol = $_POST['rol'];
+
+	}else{
+		$id_rol = 2;
 	}
 
 
