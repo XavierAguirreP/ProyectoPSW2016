@@ -1,10 +1,10 @@
 <?php
 
 	require_once ("../clases/conexion.php");
-<<<<<<< HEAD
+
 	//require_once ("../clases/usuario.php");
 	//require_once ("../clases/roles.php");
-=======
+
 	require_once ("../clases/usuario.php");
 	require_once ("../clases/roles.php");
 
@@ -14,7 +14,7 @@ require_once ("../clases/cliente.php");
 require_once ("../clases/estrato_social.php");
 
 //*********
->>>>>>> 0ab83af3d9a677ba54432f38cca2cf2ba7d573cd
+
 
 	class colector{
 
@@ -76,8 +76,4 @@ require_once ("../clases/estrato_social.php");
 
 	}
 
-<<<<<<< HEAD
-?>
-=======
-?>
->>>>>>> 0ab83af3d9a677ba54432f38cca2cf2ba7d573cd
+
