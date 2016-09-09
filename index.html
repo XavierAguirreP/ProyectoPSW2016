@@ -75,19 +75,19 @@
                 <!-- Este menu debe cambiar a mi cuenta cuando el user se logea -->
 
                   <?php
-
+                    echo $_SESSION["username"];
                     if(isset($_SESSION["username"]){
-                  ?>
+                  
                       <li><a href="cerrarsesion.php" title="Cerrar sesión">Bienvenid@ <?php  echo $_SESSION["username"]; ?> </a></li> 
-                    <?php
+                    
                     }else{
-                    ?>
+                    
                       <li><a href="pages/login.html#">Login/Register</a></li>
-                    <?php
+                    
 
                     }
 
-                    ?>
+                  ?>
 
 				 
 
