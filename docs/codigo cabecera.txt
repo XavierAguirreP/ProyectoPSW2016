@@ -1,0 +1,19 @@
+-- Table: public.cabecera_orden
+
+-- DROP TABLE public.cabecera_orden;
+
+CREATE TABLE public.cabecera_orden
+(
+  id_cabecera integer NOT NULL DEFAULT nextval('cabecera_orden_id_cabecera_seq'::regclass),
+  id_cliente integer NOT NULL DEFAULT nextval('cabecera_orden_id_cliente_seq'::regclass),
+  estado character(1) NOT NULL,
+  fecha_pedido date,
+  fecha_entrega date,
+  CONSTRAINT id_cabecera PRIMARY KEY (id_cabecera)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.cabecera_orden
+  OWNER TO postgres;
+

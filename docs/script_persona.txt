@@ -1,0 +1,17 @@
+-- Table: public.persona
+
+-- DROP TABLE public.persona;
+
+CREATE TABLE public.persona
+(
+  codigo integer NOT NULL DEFAULT nextval('"Persona_codigo_seq"'::regclass),
+  nombre character varying NOT NULL,
+  apellido character varying NOT NULL,
+  CONSTRAINT "PK_codigoPersona" PRIMARY KEY (codigo)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.persona
+  OWNER TO postgres;
+

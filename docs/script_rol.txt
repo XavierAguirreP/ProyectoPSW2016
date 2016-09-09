@@ -1,0 +1,15 @@
+-- Table: public.rol
+
+-- DROP TABLE public.rol;
+
+CREATE TABLE public.rol
+(
+  codigo integer NOT NULL DEFAULT nextval('"Rol_codigo_seq"'::regclass),
+  nombre character varying NOT NULL,
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.rol
+  OWNER TO postgres;
+

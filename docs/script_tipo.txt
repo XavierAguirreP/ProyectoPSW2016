@@ -1,0 +1,16 @@
+-- Table: public.tipo
+
+-- DROP TABLE public.tipo;
+
+CREATE TABLE public.tipo
+(
+  codigo integer NOT NULL DEFAULT nextval('tipo_codigo_seq'::regclass),
+  descripcion character varying NOT NULL,
+  CONSTRAINT "PK_codigoTIpo" PRIMARY KEY (codigo)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.tipo
+  OWNER TO postgres;
+

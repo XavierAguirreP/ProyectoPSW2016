@@ -1,0 +1,16 @@
+-- Table: public.categoria
+
+-- DROP TABLE public.categoria;
+
+CREATE TABLE public.categoria
+(
+  codigo integer NOT NULL DEFAULT nextval('categoria_codigo_seq'::regclass),
+  descripcion character varying NOT NULL,
+  CONSTRAINT "PK_codigoCategoria" PRIMARY KEY (codigo)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.categoria
+  OWNER TO postgres;
+
