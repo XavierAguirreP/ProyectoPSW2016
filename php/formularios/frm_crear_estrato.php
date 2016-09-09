@@ -19,7 +19,7 @@
 </head>
 <body style="padding:15px;">
 
-	<form id="principal" action="proceso_crear_estrato.php" method="get">
+	<form id="principal" action="../procesos/proceso_crear_estrato.php" method="get">
 <h3>                     Nuevo Registro</h3>  		
 
 		<div>

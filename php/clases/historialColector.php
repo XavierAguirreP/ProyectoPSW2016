@@ -35,7 +35,7 @@ public function ListarHistorial()
  {
  	try
 		{
-		    $result= $this->modelo->operacion("INSERT INTO historial_order(linea, id_cabecera_order) values('".$linea."','".$id_cabecera_order."')");
+		    $result= $this->modelo->operacion("INSERT INTO historial_order (linea, id_cabecera_order) values ('".$linea."','".$id_cabecera_order."')");
                 echo "se inserto registro $linea";
                 	return $result;
                 }
@@ -49,7 +49,7 @@ public function ListarHistorial()
  {
  	try
 		{
-		    $result= $this->modelo->operacion("UPDATE historial_order SET linea = '".$linea."', id_cabecera_order = '".$id_cabecera_order."'WHERE id_cliente ='".$id_cliente."' ");
+		    $result= $this->modelo->operacion("UPDATE historial_order SET linea = '".$linea."', id_cabecera_order = '".$id_cabecera_order."' WHERE id_cliente ='".$id_cliente."' ");
                      
 			return $result;
 		}
