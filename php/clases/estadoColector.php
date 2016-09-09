@@ -19,7 +19,7 @@
 
 	public function InsertEstado($descripcion_estado){
 		try{
-			$result = $this->modelo->operacion("INSERT INTO estado(id, descripcion) values(DEFAULT, '".$descripcion_estado."') ");
+			$result = $this->modelo->operacion("INSERT INTO estado(descripcion) values('".$descripcion_estado."') ");
 			return $result;
 		}catch(Exception $e){
 			die($e->getMessage());
