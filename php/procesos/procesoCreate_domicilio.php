@@ -1,7 +1,7 @@
 <?php
 session_start();
-if(!isset($_SESSION['login'])){
-  header("Location: http://localhost/php/paginas/login.html"); //editar path
+if(!isset($_SESSION['username'])){
+  header("Location: http:../php/paginas/login.html"); //editar path
   exit();
 }
 require_once '../clases/domicilioColector.php';
@@ -21,9 +21,9 @@ if(isset($_POST["direccionDescriptiva"]) && isset ($_POST["callePrincipal"]) && 
 
 
           if($vCollector->InsertDomicilio(obj)){
-            
 
-            header("Location: http://localhost/php/paginas/listar_domicilios.php"); /*no olvidar editar los paths*/
+
+            header("Location: http:../php/paginas/Listar_domicilios.php"); /*no olvidar editar los paths*/
             exit();
           }else{
             ?>
@@ -33,7 +33,7 @@ if(isset($_POST["direccionDescriptiva"]) && isset ($_POST["callePrincipal"]) && 
               <title>PROCESO - CREAR - DOMICILIO</title>
             </head>
             <body>
-              <a href="../paginas/listar_domicilios.php">Volver</a>
+              <a href="../paginas/Listar_domicilios.php">Volver</a>
 
             </body>
             </html>
@@ -47,7 +47,7 @@ if(isset($_POST["direccionDescriptiva"]) && isset ($_POST["callePrincipal"]) && 
       <title>PROCESO - CREAR - DOMICILIO</title>
     </head>
     <body>
-      <a href="../paginas/listar_domicilios.php">Volver</a>
+      <a href="../paginas/Listar_domicilios.php">Volver</a>
 
     </body>
     </html>
