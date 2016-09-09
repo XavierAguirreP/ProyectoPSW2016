@@ -1,9 +1,9 @@
 <?php 
 class conexion extends PDO {
-	private $dbname = "hanya"; //nombre base de datos
-	private $host = "localhost";  //nombre servidor
-	private $user = "postgres"; //nombre usuarios base de datos
-	private $pass = "root"; //password usuario
+	private $dbname = "d3rcn9tf0th43c"; //nombre base de datos
+	private $host = "ec2-54-163-239-218.compute-1.amazonaws.com";  //nombre servidor
+	private $user = "ucbwkgsngyrwzc"; //nombre usuarios base de datos
+	private $pass = "Q-NmYFBn7VOzcMSAdsoUxNJqYP"; //password usuario
 	private $port = "5432"; //puerto postgreSql
 	private $dbh;
  	
