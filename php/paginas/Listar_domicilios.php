@@ -1,9 +1,9 @@
 <?php
 session_start();
-if(!isset($_SESSION['username'])){
-  header("Location: http:../php/paginas/login.html");
-  exit();
-}
+//if(!isset($_SESSION['username'])){
+  //header("Location: http:../php/paginas/login.html");
+  //exit();
+//}
 require_once '../clases/domicilio.php';
 require_once '../clases/domicilioColector.php';
 
@@ -15,8 +15,8 @@ require_once '../clases/domicilioColector.php';
      </head>
      <body>
        <?php
-       echo "Hola ".$_SESSION['username'];
-       echo"<a href=Administrator.php> Volver</a>";
+       //echo "Hola ".$_SESSION['username'];
+       //echo"<a href=Administrator.php> Volver</a>";
         ?>
         <table class="datos">
           <tr>
@@ -34,7 +34,7 @@ require_once '../clases/domicilioColector.php';
                       <td> <?php echo $datos->getDireccionDescriptiva(); ?> </td>
                        <td> <?php echo $datos->getCallePrincipal(); ?> </td>
                        <td> <?php echo $datos->getCalleSecundaria(); ?> </td>
-                       <td> <?php echo $datos->getNumeracion; ?> </td>
+                       <td> <?php echo $datos->getNumeracion(); ?> </td>
 
                        <td><a href="../formularios/frm_Update_domicilio.php?id=<?php echo $datos->getId();?>"> Editar</a>  </td>
                        <td><a href="../procesos/proceso_Delete_domicilio.php?id=<?php echo $datos->getId();?>"> Eliminar</a>  </td>
