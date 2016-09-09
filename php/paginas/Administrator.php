@@ -43,7 +43,7 @@
 	<br>
 	<br>
 
-	<a href="../paginas/Listar_productos.php">Listar_productos</a>
+	<a href="../paginas/Listar_producto.php">Listar_productos</a>
 	<br>
 	<br>
 
@@ -68,6 +68,13 @@
 	<br>
 
 	<a href="../paginas/ListarEstrato.php">Listar_Estrato_Social_de_clientes</a>
+	<br>
+	<br>
+	<br>
+	<br>
+	<a href="../../index.html">Volver al sitio</a>
+
+
 
 </body>
 </html>
