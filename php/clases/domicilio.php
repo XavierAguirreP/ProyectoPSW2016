@@ -1,15 +1,20 @@
 <?php
-  public class Domicilio{
+  class Domicilio{
     private $id;
     private $direccionDescriptiva;
     private $callePrincipal;
     private $calleSecundaria;
     private $numeracion;
 
-    public function __construct()
+    function __construct()
     {
 
     }
+
+    function __clone() {  
+     $this->id = ++$this->id;   
+    } 
+    
     public function getId(){
       return $this->id;
     }
