@@ -1,7 +1,7 @@
 <?php
 session_start();
-if(!isset($_SESSION['login'])){
-  header("Location: http://localhost/php/paginas/login.html");
+if(!isset($_SESSION['username'])){
+  header("Location: http:../php/paginas/login.html");
   exit();
 }
 require_once '../clases/cabeceraOrdenColector.php';
@@ -15,10 +15,11 @@ if(isset($_POST["id"]) && isset($_POST["idCliente"])&& isset($_POST["fechaEntreg
  $obj->setFechaEmision($_POST["fechaEmision"]);
  $obj->setEstado($_POST["estado"]);
  $obj->setIva($_POST["iva"]);
+ $obj->setId($_POST["id"]);
 
          if($coll->UpdateCabeceraOrden($obj)){
            //var_dump($obj);
-           header("Location: http://localhost/php/paginas/listar_cabeceras.php");
+           header("Location: http:../php/paginas/Listar_cabeceras.php");
            exit();
          }else{
              echo "Hubo un error al intentar actualizar la cabecera.";
@@ -30,7 +31,7 @@ if(isset($_POST["id"]) && isset($_POST["idCliente"])&& isset($_POST["fechaEntreg
              </head>
              <body>
              	<br>
-             	<a href="../paginas/listar_cabeceras.php">Volver</a>
+             	<a href="../paginas/Listar_cabeceras.php">Volver</a>
 
              </body>
              </html>
@@ -39,7 +40,7 @@ if(isset($_POST["id"]) && isset($_POST["idCliente"])&& isset($_POST["fechaEntreg
 
 
 }else{
- header("Location: http://localhost/php/paginas/listar_cabeceras.php");
+ header("Location: http:../php/paginas/Listar_cabeceras.php");
  exit();
 }
 ?>
